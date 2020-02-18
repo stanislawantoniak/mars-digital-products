@@ -65,7 +65,7 @@ export default ({ children }) => {
               <tr key={index}>
                 <td>{index.name}</td>
                 <td>
-				{ !index.url.endsWith('jpg') ?
+				{ !index.URL.endsWith('jpg') ?
                 <iframe
                   src={index.URL}
                   title="Salsify Viedo"

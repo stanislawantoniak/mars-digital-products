@@ -78,7 +78,7 @@ class Page4 extends Component {
                   <tr key={index}>
                     <td>{index.name}</td>
                     <td>
-					{ !index.url.endsWith('jpg') ?
+					{ !index.URL.endsWith('jpg') ?
                     <iframe
                       src={index.URL}
                       title="Salsify Viedo"
