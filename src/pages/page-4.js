@@ -78,6 +78,7 @@ class Page4 extends Component {
                   <tr key={index}>
                     <td>{index.name}</td>
                     <td>
+					{ !index.url.endsWith('jpg') ?
                     <iframe
                       src={index.URL}
                       title="Salsify Viedo"
@@ -89,6 +90,8 @@ class Page4 extends Component {
                       mozallowfullscreen="false"
                       
                     />
+					: <img src={index.URL}></img> 
+					}
                     </td>              
                   </tr>
                 ))}
