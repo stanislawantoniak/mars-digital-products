@@ -126,7 +126,7 @@ class Page5 extends Component {
         	method: 'get',
 			mode: 'no-cors',
         	headers: salsifyHeaders,
-        	credentials: 'omit'
+        	credentials: 'include'
     	}).then( (response) => {
         	console.log("Response from End point1",response)
         	return response.text();
