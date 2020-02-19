@@ -122,6 +122,7 @@ class Page5 extends Component {
       console.log("Salsify URL",salsifyUrl)
       return fetch(salsifyUrl, {
         method: 'get',
+		mode: 'no-cors',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
