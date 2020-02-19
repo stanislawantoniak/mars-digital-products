@@ -118,7 +118,7 @@ class Page5 extends Component {
     
     try
     {
-      const salsifyUrl='/api/v1/orgs/s-81e351da-195f-412c-8fd8-f011973f6ab1/products/'+id+'/';
+      const salsifyUrl='https://app.salsify.com/api/v1/orgs/s-81e351da-195f-412c-8fd8-f011973f6ab1/products/'+id+'/';
       console.log("Salsify URL",salsifyUrl)
       return fetch(salsifyUrl, {
         method: 'get',

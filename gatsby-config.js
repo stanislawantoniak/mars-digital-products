@@ -59,9 +59,9 @@ module.exports = {
        resolve: 'gatsby-plugin-apollo',
        options: {
         typeName: "Product",        
-        fieldName: "myApi",
-        
+        fieldName: "myApi",        
         uri: 'https://dev.api.effem.com/graphql-salsify-pocdev/graphql/',
+
         //uri: '/api/graphql',
         //uri: "/graphql-salsify-pocdev/graphql/",
          
