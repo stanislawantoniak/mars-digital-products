@@ -119,15 +119,13 @@ class Page5 extends Component {
     try
     {
       const salsifyUrl='https://app.salsify.com/api/v1/orgs/s-81e351da-195f-412c-8fd8-f011973f6ab1/products/'+id+'/';
-      console.log("Salsify URL",salsifyUrl)
+      console.log("Salsify URL",salsifyUrl);
+	  const salsifyHeaders = new Headers();
+	  salsifyHeaders.append('Authorization','Bearer f7431f11a27df222ea9b5b049483764faac628386a464f262149d375c26452ac');
       return fetch(salsifyUrl, {
         method: 'get',
 		mode: 'no-cors',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer f7431f11a27df222ea9b5b049483764faac628386a464f262149d375c26452ac',
-        },
+        headers: salsifyHeaders,
         credentials: 'include',
     }).then(function (response) {
       console.log("Response from End point1",response)
