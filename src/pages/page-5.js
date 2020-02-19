@@ -124,7 +124,7 @@ class Page5 extends Component {
 	  	salsifyHeaders.append('Authorization','Bearer f7431f11a27df222ea9b5b049483764faac628386a464f262149d375c26452ac');
       	return fetch(salsifyUrl, {
         	method: 'get',
-			mode: 'no-cors',
+			mode: 'cors',
         	headers: salsifyHeaders,
         	credentials: 'include'
     	}).then( (response) => {
