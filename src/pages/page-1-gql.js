@@ -121,16 +121,13 @@ class Page4 extends Component {
  query {
     product(id:${id}) {
    	id
+	systemId
     name
-    brand
-    cost
     retailPrice
-    sapProductTitle
-    assets {
-      id
+    SAPProductTitle
+    digitalAssets {
       url
-      format
-      bytes
+      name
     }
   }  
 }`
