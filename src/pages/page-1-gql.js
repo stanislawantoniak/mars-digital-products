@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import gql from 'graphql-tag';
 import { withApollo } from 'react-apollo'
@@ -9,7 +8,7 @@ import { withApollo } from 'react-apollo'
 class Page4 extends Component {
 
 	state = {
-		id: '1001',
+		id: '',
 		filterData: []
 	}
 	
