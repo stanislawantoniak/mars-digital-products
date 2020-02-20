@@ -67,7 +67,7 @@ export default ({ children }) => {
                 <td>
 				{ !index.URL.endsWith('jpg') ?
                 <iframe
-                  src={index.URL}
+                  src={index.URL.replace('http','https')}
                   title="Salsify Viedo"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   frameBorder="5"
@@ -77,7 +77,7 @@ export default ({ children }) => {
                   mozallowfullscreen="false"
                   
                 />
-				: <img src={index.URL}></img> 
+				: <img src={index.URL.replace('http','https')}></img> 
 				}
                 </td>              
               </tr>

@@ -78,8 +78,9 @@ class Page5 extends Component {
                   <tr key={index}>
                     <td>{index['salsify:name']}</td>
                     <td>
+					{ !index['salsify:url'].endsWith('jpg') ?
                     <iframe
-                      src={index['salsify:url']}
+                      src={index['salsify:url'].replace('http','https')}
                       title="Salsify Viedo"
                       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                       frameBorder="5"
@@ -89,6 +90,8 @@ class Page5 extends Component {
                       mozallowfullscreen="false"
                       
                     />
+					: <img src={index['salsify:url'].replace('http','https')}></img> 
+					}
                     </td>              
                   </tr>
                 ))}
