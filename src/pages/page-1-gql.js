@@ -106,9 +106,9 @@ class Page4 extends Component {
 				<table>
 					<tr>
 						<td>
-							<Link to="/page-2/">Static Graph QL Example</Link></td>
-						<td><Link to="/page-4/">Dynamic Graph QL Example</Link></td>
-						<td><Link to="/page-5/">Normal Rest Example</Link></td>
+    <Link to="/page-2-static/">Static Graph QL Example</Link></td>
+    <td><Link to="/page-1-gql/">Dynamic Graph QL Example</Link></td>
+    <td><Link to="/page-5-rest/">Normal Rest Example</Link></td>
 					</tr>
 				</table>
 			</Layout>
