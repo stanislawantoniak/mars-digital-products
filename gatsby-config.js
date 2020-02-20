@@ -60,7 +60,8 @@ module.exports = {
        options: {
         typeName: "Product",        
         fieldName: "myApi",        
-        uri: 'https://dev.api.effem.com/graphql-salsify-pocdev/graphql/',
+        uri: 'https://mars-graphql-poc.herokuapp.com/' 
+		//'https://dev.api.effem.com/graphql-salsify-pocdev/graphql/',
 
         //uri: '/api/graphql',
         //uri: "/graphql-salsify-pocdev/graphql/",

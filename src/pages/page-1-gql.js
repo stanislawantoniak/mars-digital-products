@@ -12,6 +12,7 @@ class Page4 extends Component {
 		id: '1001',
 		filterData: []
 	}
+	
 	constructor(props) {
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
@@ -53,16 +54,15 @@ class Page4 extends Component {
 					<tbody>
 						{data.product ?
 							<tr key={data.product.id}>
-								<td>{data.product.id}</td>
 								<td>{data.product.systemId}</td>
-								<td>{data.product.SAPProductTitle}</td>
+								<td>{data.product.sapProductTitle}</td>
 								<td>{data.product.retailPrice}</td>
 							</tr>
 							: <tr><td>"Product details Not Found"</td></tr>}
 					</tbody>
 				</table>
 				<div>
-					<h1>Digital Assets</h1>
+					<h3>Digital Assets</h3>
 					<table>
 						<thead>
 							<tr>
@@ -79,9 +79,9 @@ class Page4 extends Component {
 									<tr key={index}>
 										<td>{index.name}</td>
 										<td>
-											{!index.URL.endsWith('jpg') ?
+											{!index.url.endsWith('jpg') ?
 												<iframe
-													src={index.URL}
+													src={index.url.replace('http','https')}
 													title="Salsify Viedo"
 													allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 													frameBorder="5"
@@ -91,7 +91,7 @@ class Page4 extends Component {
 													mozallowfullscreen="false"
 
 												/>
-												: <img src={index.URL}></img>
+												: <img src={index.url.replace('http','https')}></img>
 											}
 										</td>
 									</tr>
@@ -121,18 +121,20 @@ class Page4 extends Component {
 		const FEED_SEARCH_QUERY = gql`
 
  query {
-     product(id:${id}) {
-     systemId
-     id
-     SAPProductTitle
-     retailPrice
-     digitalAssets {
-       id
-       URL
-       status
-       name        
-}
-}   
+    product(id:${id}) {
+   	id
+    name
+    brand
+    cost
+    retailPrice
+    sapProductTitle
+    assets {
+      id
+      url
+      format
+      bytes
+    }
+  }  
 }`
 
 		try {
@@ -152,9 +154,7 @@ class Page4 extends Component {
 			console.log("Error********", error);
 		}
 
-
 	}
-
 
 }
 
