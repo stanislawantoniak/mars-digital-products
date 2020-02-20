@@ -54,8 +54,9 @@ class Page4 extends Component {
 					<tbody>
 						{data.product ?
 							<tr key={data.product.id}>
+								<td>{data.product.id}</td>
 								<td>{data.product.systemId}</td>
-								<td>{data.product.sapProductTitle}</td>
+								<td>{data.product.SAPProductTitle}</td>
 								<td>{data.product.retailPrice}</td>
 							</tr>
 							: <tr><td>"Product details Not Found"</td></tr>}
@@ -75,7 +76,7 @@ class Page4 extends Component {
 						</tbody>
 						{data.product ?
 							<tbody id={data.product.systemId}>
-								{data.product.assets.map((index) => (
+								{data.product.digitalAssets.map((index) => (
 									<tr key={index}>
 										<td>{index.name}</td>
 										<td>
@@ -99,9 +100,6 @@ class Page4 extends Component {
 							</tbody>
 							: null}
 					</table>
-				</div>
-				<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-					<Image />
 				</div>
 				<table>
 					<tr>

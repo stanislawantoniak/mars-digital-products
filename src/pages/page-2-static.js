@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 
@@ -85,9 +84,6 @@ export default ({ children }) => {
           </tbody>
         </table>
       </div>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
     <table>
       <tr>
         <td>

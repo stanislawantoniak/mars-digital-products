@@ -99,9 +99,7 @@ class Page5 extends Component {
               :null}
             </table>
           </div>
-          <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-          <Image />
-        </div>
+
         <table>
       <tr>
         <td>
