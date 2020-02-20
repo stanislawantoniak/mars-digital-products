@@ -75,7 +75,7 @@ class Page4 extends Component {
 						</tbody>
 						{data.product ?
 							<tbody id={data.product.systemId}>
-								{data.product.digitalAssets.map((index) => (
+								{data.product.assets.map((index) => (
 									<tr key={index}>
 										<td>{index.name}</td>
 										<td>
