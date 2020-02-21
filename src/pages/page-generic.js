@@ -9,8 +9,6 @@ class PageGeneric extends Component {
 		id: '',
 		filterData: []
 	}
-
-	renderer = new Renderer();
 	
 	constructor(props) {
 		super(props);
@@ -38,7 +36,7 @@ class PageGeneric extends Component {
 					Search Product
           		</button>
 				
-				{ produceProductSection(this.state.filterData) }
+				{ renderer.produceProductSection(this.state.filterData) }
 
 
 

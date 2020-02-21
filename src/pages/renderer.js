@@ -81,4 +81,4 @@ class Renderer {
 
 const renderer = new Renderer();
 
-export default renderer.produceProductSection;
+export default renderer;
