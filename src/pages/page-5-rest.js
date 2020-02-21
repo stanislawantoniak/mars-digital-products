@@ -47,10 +47,7 @@ class Page5 extends PageGeneric {
 				brand: product.Brand,
 				description: product.Descriptions,
 				SAPProductTitle: product['SAP Product Title'],
-				cost: product.cost,
 				retailPrice: product['Retail Price'],
-				mainImage: this.assetReducer(this.getImageFromAssets(product['salsify:digital_assets'], product['Main Image (Front)'])),
-				backImage: this.assetReducer(this.getImageFromAssets(product['salsify:digital_assets'], product['Back Image'])),
 				digitalAssets: product['salsify:digital_assets'] == null ? [] : product['salsify:digital_assets'].map(asset => this.assetReducer(asset))
 			}
 		};
@@ -67,22 +64,6 @@ class Page5 extends PageGeneric {
 				bytes: asset['salsify:bytes'],
 				status: asset['salsify:status']
 			};
-	}
-
-	getImageFromAssets(assetArray, id) {
-		const asset = (assetArray == null || id == null
-			? null
-			: assetArray.find(this.checkId, id));
-
-		return asset;
-
-	}
-
-	checkId(item) {
-		console.log('this in checkId: ' + this);
-		return item == null
-			? false
-			: item['salsify:id'] == this
 	}
 
 }

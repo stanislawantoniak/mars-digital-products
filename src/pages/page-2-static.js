@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import productSection from './renderer'
+import renderer from './renderer'
 
 export default ({ children }) => {
 	
@@ -15,6 +15,8 @@ export default ({ children }) => {
 		        	id
 		          	SAPProductTitle
 		          	retailPrice
+					brand
+					description
 		         	digitalAssets {
 		            	id
 		         	   	URL
@@ -31,7 +33,7 @@ export default ({ children }) => {
 			<SEO title="Home" />
 			<h1>Welcome to Mars Digital Product Experience - Static Query Example</h1>
 			<p>Welcome to your Mars Digital Product Experience Application.</p>
-			{ productSection(data.productApi)}
+			{ renderer.productSection(data.productApi)}
 		</Layout>
 
 	)

@@ -14,6 +14,8 @@ class Page4 extends PageGeneric {
 					systemId
 			    	name
 			    	retailPrice
+					brand
+					description
 			    	SAPProductTitle
 			    	digitalAssets {
 			    	  URL

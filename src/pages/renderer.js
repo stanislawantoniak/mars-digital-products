@@ -11,9 +11,9 @@ class Renderer {
 				<table>
 					<thead>
 						<tr>
-							<th>ProductId</th>
-							<th>SystemId</th>
-							<th>SAPProductTitle</th>
+							<th>Product Id</th>
+							<th>SAP Product Title</th>
+							<th>Brand</th>
 							<th>Retail Price</th>
 						</tr>
 					</thead>
@@ -21,8 +21,8 @@ class Renderer {
 						{data.product ?
 							<tr key={data.product.id}>
 								<td>{data.product.id}</td>
-								<td>{data.product.systemId}</td>
 								<td>{data.product.SAPProductTitle}</td>
+								<td>{data.product.brand}</td>
 								<td>{data.product.retailPrice}</td>
 							</tr>
 							: <tr><td>"Product details Not Found"</td></tr>}
@@ -80,6 +80,6 @@ class Renderer {
 
 }
 
-const productSection = new Renderer().produceProductSection;
+const renderer = new Renderer();
 
-export default productSection;
+export default renderer;
