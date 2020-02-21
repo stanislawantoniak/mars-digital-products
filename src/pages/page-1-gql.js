@@ -1,8 +1,15 @@
 import PageGeneric from './page-generic'
 import gql from 'graphql-tag';
 import { withApollo } from 'react-apollo'
+import Renderer from './renderer';
 
 class Page4 extends PageGeneric {
+
+	render() {
+		const renderer = new Renderer();
+		const data = this.state.filterData;
+		return renderer.produce(data, _executeSearch)
+	}
 
 	_executeSearch = async () => {
 
