@@ -9,7 +9,7 @@ class PageGeneric extends Component {
 		id: '',
 		filterData: []
 	}
-	
+
 	constructor(props) {
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
@@ -33,9 +33,10 @@ class PageGeneric extends Component {
 				<button onClick={() => this._executeSearch()}>
 					Search Product
           		</button>
-				<hr/>
-				
-				{ productRenderer(this.state.filterData) }
+				<br />
+				<hr />
+
+				{productRenderer(this.state.filterData)}
 
 
 
