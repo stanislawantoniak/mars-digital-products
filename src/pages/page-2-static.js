@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import renderer from './renderer'
+import productRenderer from './renderer'
 
 export default ({ children }) => {
 	
@@ -33,7 +33,7 @@ export default ({ children }) => {
 			<SEO title="Home" />
 			<h1>Welcome to Mars Digital Product Experience - Static Query Example</h1>
 			<p>Welcome to your Mars Digital Product Experience Application.</p>
-			{ renderer.productSection(data.productApi)}
+			{ productRenderer(data.productApi)}
 		</Layout>
 
 	)

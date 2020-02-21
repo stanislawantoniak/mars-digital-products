@@ -80,6 +80,6 @@ class Renderer {
 
 }
 
-const renderer = new Renderer();
+const productRenderer = new Renderer().productSection;
 
-export default renderer;
+export default productRenderer;
