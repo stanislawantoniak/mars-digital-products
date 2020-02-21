@@ -11,7 +11,7 @@ class Renderer {
 				<table>
 					<thead>
 						<tr>
-							<th>Product Id</th>
+							<th>Id</th>
 							<th>SAP Product Title</th>
 							<th>Brand</th>
 							<th>Retail Price</th>
