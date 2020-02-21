@@ -38,7 +38,7 @@ class PageGeneric extends Component {
 					Search Product
           		</button>
 				
-				{ this.renderer.produceProductSection(this.state.filterData) }
+				{ produceProductSection(this.state.filterData) }
 
 
 

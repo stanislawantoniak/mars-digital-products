@@ -4,8 +4,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Renderer from './renderer'
 
-const renderer = new Renderer()
-
 export default ({ children }) => {
 	const data = useStaticQuery(
 		graphql`
@@ -33,7 +31,7 @@ export default ({ children }) => {
 			<SEO title="Home" />
 			<h1>Welcome to Mars Digital Product Experience - Static Query Example</h1>
 			<p>Welcome to your Mars Digital Product Experience Application.</p>
-			{ renderer.produceProductSection(data.productApi)}
+			{ produceProductSection(data.productApi)}
 		</Layout>
 
 	)
