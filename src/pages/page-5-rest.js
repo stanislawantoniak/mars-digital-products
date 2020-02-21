@@ -14,7 +14,7 @@ class Page5 extends PageGeneric {
 		const fetchResult = await fetch(salsifyUrl, {
 			method: 'get'
 		}).then((response) => {
-			console.log("Raw response from "+ salsifyUrl, response)
+			console.log("Raw response from " + salsifyUrl, response)
 			return response.text();
 		}).then((responseBody) => {
 			try {
@@ -40,17 +40,19 @@ class Page5 extends PageGeneric {
 	productReducer(product) {
 
 		return {
-			id: product["salsify:id"] || 0,
-			systemId: product["salsify:system_id"],
-			name: product["Product name"],
-			brand: product.Brand,
-			description: product.Descriptions,
-			SAPProductTitle: product['SAP Product Title'],
-			cost: product.cost,
-			retailPrice: product['Retail Price'],
-			mainImage: this.assetReducer(this.getImageFromAssets(product['salsify:digital_assets'], product['Main Image (Front)'])),
-			backImage: this.assetReducer(this.getImageFromAssets(product['salsify:digital_assets'], product['Back Image'])),
-			digitalAssets: product['salsify:digital_assets'] == null ? [] : product['salsify:digital_assets'].map(asset => this.assetReducer(asset))
+			product: {
+				id: product["salsify:id"] || 0,
+				systemId: product["salsify:system_id"],
+				name: product["Product name"],
+				brand: product.Brand,
+				description: product.Descriptions,
+				SAPProductTitle: product['SAP Product Title'],
+				cost: product.cost,
+				retailPrice: product['Retail Price'],
+				mainImage: this.assetReducer(this.getImageFromAssets(product['salsify:digital_assets'], product['Main Image (Front)'])),
+				backImage: this.assetReducer(this.getImageFromAssets(product['salsify:digital_assets'], product['Back Image'])),
+				digitalAssets: product['salsify:digital_assets'] == null ? [] : product['salsify:digital_assets'].map(asset => this.assetReducer(asset))
+			}
 		};
 	}
 
