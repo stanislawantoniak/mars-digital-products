@@ -45,9 +45,9 @@ class Renderer {
 									<tr key={index}>
 										<td>{index.name}</td>
 										<td>
-											{!index.url.endsWith('jpg') ?
+											{!index.URL.endsWith('jpg') ?
 												<iframe
-													src={index.url.replace('http', 'https')}
+													src={index.URL.replace('http', 'https')}
 													title="Salsify Viedo"
 													allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 													frameBorder="5"
@@ -57,7 +57,7 @@ class Renderer {
 													mozallowfullscreen="false"
 
 												/>
-												: <img src={index.url.replace('http', 'https')}></img>
+												: <img src={index.URL.replace('http', 'https')}></img>
 											}
 										</td>
 									</tr>
