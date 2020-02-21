@@ -7,6 +7,7 @@ class Renderer {
 		console.log("Data from Back end", data.product)
 		return (
 			<div>
+				<h3>Product Details.</h3>
 				<table>
 					<thead>
 						<tr>

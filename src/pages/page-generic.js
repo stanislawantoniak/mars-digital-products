@@ -31,7 +31,7 @@ class PageGeneric extends Component {
 				<label>Enter Product ID </label>
 				<input type="text" name="searchText" onChange={this.handleChange} />
 				user entered text {this.state.id}
-				<h3>Product Details.</h3>
+
 				<button onClick={() => this._executeSearch()}>
 					Search Product
           		</button>

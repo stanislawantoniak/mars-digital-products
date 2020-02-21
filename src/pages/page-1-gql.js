@@ -17,7 +17,7 @@ class Page4 extends PageGeneric {
     retailPrice
     SAPProductTitle
     digitalAssets {
-      url
+      URL
       name
     }
   }  
