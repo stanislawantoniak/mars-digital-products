@@ -13,7 +13,7 @@ class Page5 extends PageGeneric {
 			const salsifyUrl = 'https://dev.api.effem.com/salsify-product-proxy-poc/product/' + id;
 
 			console.log("Salsify URL", salsifyUrl);
-			return fetch( salsifyUrl, {
+			return fetch(salsifyUrl, {
 				method: 'get'
 			}).then((response) => {
 				console.log("Response from End point1", response)
@@ -71,6 +71,21 @@ class Page5 extends PageGeneric {
 			};
 	}
 
+	getImageFromAssets(assetArray, id) {
+		const asset = (assetArray == null || id == null
+			? null
+			: assetArray.find(this.checkId, id));
+
+		return asset;
+
+	}
+
+	checkId(item) {
+		console.log('this in checkId: ' + this);
+		return item == null
+			? false
+			: item['salsify:id'] == this
+	}
 
 }
 export default withApollo(Page5)
