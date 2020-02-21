@@ -1,8 +1,8 @@
-import PageGeneric from '../components/page-generic'
+import PageGeneric from './page-generic'
 import { withApollo } from 'react-apollo'
 
 
-class Page5 extends PageGeneric {
+class Page3 extends PageGeneric {
 
 	_executeSearch = async () => {
 
@@ -67,4 +67,4 @@ class Page5 extends PageGeneric {
 	}
 
 }
-export default withApollo(Page5)
+export default withApollo(Page3)

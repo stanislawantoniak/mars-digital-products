@@ -19,7 +19,7 @@ const IndexPage = () => (
         <td>
     <Link to="/page-2-static/">Static Graph QL Example</Link></td>
     <td><Link to="/page-1-gql/">Dynamic Graph QL Example</Link></td>
-    <td><Link to="/page-5-rest/">Normal Rest Example</Link></td>
+    <td><Link to="/page-3-rest/">Normal Rest Example</Link></td>
     </tr>
     </table>
   </Layout>

@@ -11,7 +11,7 @@ class Renderer {
 				<div class="tab">
 					<Button><Link to="/page-2-static/">Static Graph QL Example</Link></Button>
 					<Button><Link to="/page-1-gql/">Dynamic Graph QL Example</Link></Button>
-					<Button><Link to="/page-5-rest/">Normal Rest Example</Link></Button>
+					<Button><Link to="/page-3-rest/">Normal Rest Example</Link></Button>
 				</div>
 				<h3>Product Details.</h3>
 				<table>

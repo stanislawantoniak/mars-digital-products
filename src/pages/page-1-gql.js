@@ -1,8 +1,8 @@
-import PageGeneric from '../components/page-generic'
+import PageGeneric from './page-generic'
 import gql from 'graphql-tag';
 import { withApollo } from 'react-apollo'
 
-class Page4 extends PageGeneric {
+class Page1 extends PageGeneric {
 
 	_executeSearch = async () => {
 
@@ -31,13 +31,13 @@ class Page4 extends PageGeneric {
 			query: FEED_SEARCH_QUERY,
 			variables: { id },
 		})
-		const links = result.data;
-		console.log("Data::: ", links);
 
-		this.setState({ filterData: links });
+		console.log("Data::: ", result.data);
+
+		this.setState({ filterData: result.data });
 
 	}
 
 }
 
-export default withApollo(Page4)
+export default withApollo(Page1)
