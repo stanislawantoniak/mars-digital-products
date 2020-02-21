@@ -37,6 +37,8 @@ class PageGeneric extends Component {
 				
 				{ productRenderer(this.state.filterData) }
 
+
+
 			</Layout>
 		)
 	}

@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Button } from "gatsby"
 
 class Renderer {
 
@@ -8,11 +7,6 @@ class Renderer {
 		console.log("Data from Back end", data.product)
 		return (
 			<div>
-				<div class="tab">
-					<Button><Link to="/page-2-static/">Static Graph QL Example</Link></Button>
-					<Button><Link to="/page-1-gql/">Dynamic Graph QL Example</Link></Button>
-					<Button><Link to="/page-3-rest/">Normal Rest Example</Link></Button>
-				</div>
 				<h3>Product Details.</h3>
 				<table>
 					<thead>
@@ -73,7 +67,13 @@ class Renderer {
 							: null}
 					</table>
 				</div>
-
+				<table>
+					<tr>
+						<td><Link to="/page-2-static/">Static Graph QL Example</Link></td>
+						<td><Link to="/page-1-gql/">Dynamic Graph QL Example</Link></td>
+						<td><Link to="/page-5-rest/">Normal Rest Example</Link></td>
+					</tr>
+				</table>
 			</div>
 		)
 	}
