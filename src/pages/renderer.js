@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 class Renderer {
 
 	productSection(data) {
-		console.log("Data from Back end", data.product)
+		console.log("Data from Back end - renderer", data.product)
 		return (
 			<div>
 				<h3>Product Details.</h3>

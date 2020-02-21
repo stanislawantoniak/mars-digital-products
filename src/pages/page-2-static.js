@@ -33,6 +33,7 @@ export default ({ children }) => {
 			<SEO title="Home" />
 			<h1>Welcome to Mars Digital Product Experience - Static Query Example</h1>
 			<p>Welcome to your Mars Digital Product Experience Application.</p>
+			<hr/>
 			{ productRenderer(data.productApi)}
 		</Layout>
 

@@ -21,8 +21,7 @@ class PageGeneric extends Component {
 	}
 
 	render() {
-		const data = this.state.filterData;
-		console.log("Data from Back end", data.product)
+
 		return (
 			<Layout>
 				<SEO title="Home" />
@@ -34,6 +33,7 @@ class PageGeneric extends Component {
 				<button onClick={() => this._executeSearch()}>
 					Search Product
           		</button>
+				<hr/>
 				
 				{ productRenderer(this.state.filterData) }
 
