@@ -79,6 +79,6 @@ class Renderer {
 
 }
 
-const renderer = new Renderer();
+const productSection = new Renderer().produceProductSection;
 
-export default renderer;
+export default productSection;

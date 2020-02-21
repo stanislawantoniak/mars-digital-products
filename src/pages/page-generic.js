@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Renderer from './renderer'
+import renderer from './renderer'
 
 class PageGeneric extends Component {
 
@@ -36,7 +36,7 @@ class PageGeneric extends Component {
 					Search Product
           		</button>
 				
-				{ renderer.produceProductSection(this.state.filterData) }
+				{ productSection(this.state.filterData) }
 
 
 
