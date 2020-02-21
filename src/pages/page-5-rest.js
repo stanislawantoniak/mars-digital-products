@@ -4,45 +4,36 @@ import { withApollo } from 'react-apollo'
 
 class Page5 extends PageGeneric {
 
-	_executeSearch = () => {
+	_executeSearch = async () => {
 
 		const { id } = this.state;
-		let currentComponent = this;
 
-		try {
-			const salsifyUrl = 'https://dev.api.effem.com/salsify-product-proxy-poc/product/' + id;
+		const salsifyUrl = 'https://dev.api.effem.com/salsify-product-proxy-poc/product/' + id;
 
-			console.log("Salsify URL", salsifyUrl);
-			return fetch(salsifyUrl, {
-				method: 'get'
-			}).then((response) => {
-				console.log("Response from End point1", response)
-				return response.text();
-			}).then((responseBody) => {
-				try {
-					const jsonResponse = JSON.parse(responseBody);
-					console.log("Response from End point2", jsonResponse)
-					currentComponent.setState({ salsifyResponse: jsonResponse })
-					
-					const productNormalized = this.productReducer(jsonResponse); 
-					
-					this.setState({ filterData: productNormalized });
-					
-					return productNormalized;
-					
-				} catch (error) {
+		console.log("Salsify URL", salsifyUrl);
+		const fetchResult = await fetch(salsifyUrl, {
+			method: 'get'
+		}).then((response) => {
+			console.log("Raw response from "+ salsifyUrl, response)
+			return response.text();
+		}).then((responseBody) => {
+			try {
+				const jsonResponse = JSON.parse(responseBody);
+				console.log("Json response from " + salsifyUrl, jsonResponse)
 
-					console.log("Response from End point3", error)
-					return responseBody;
+				return jsonResponse;
 
-				}
-			});
+			} catch (error) {
 
-		}
-		catch (error) {
-			console.log("Error********", error);
-		}
+				console.log("Error response from " + salsifyUrl, error)
+				return responseBody;
 
+			}
+		});
+
+		const productNormalized = this.productReducer(fetchResult);
+		console.log("Normalized response from " + salsifyUrl, jsonResponse)
+		this.setState({ filterData: productNormalized });
 
 	}
 
