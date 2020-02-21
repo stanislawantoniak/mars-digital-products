@@ -26,12 +26,14 @@ export default ({ children }) => {
 }`
 	)
 
+	renderer = new Renderer();
+
 	return (
 		<Layout>
 			<SEO title="Home" />
 			<h1>Welcome to Mars Digital Product Experience - Static Query Example</h1>
 			<p>Welcome to your Mars Digital Product Experience Application.</p>
-			{new Renderer.produce(data.productApi)}
+			{ this.renderer.produceProductSection(data.productApi)}
 		</Layout>
 
 	)
