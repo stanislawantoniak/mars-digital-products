@@ -4,6 +4,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Renderer from './renderer'
 
+const renderer = new Renderer()
+
 export default ({ children }) => {
 	const data = useStaticQuery(
 		graphql`
@@ -25,8 +27,6 @@ export default ({ children }) => {
         
 }`
 	)
-
-	const renderer = new Renderer();
 
 	return (
 		<Layout>
