@@ -8,20 +8,19 @@ class Page4 extends PageGeneric {
 
 		const { id } = this.state;
 		const FEED_SEARCH_QUERY = gql`
-
- query {
-    product(id:${id}) {
-   	id
-	systemId
-    name
-    retailPrice
-    SAPProductTitle
-    digitalAssets {
-      URL
-      name
-    }
-  }  
-}`
+			 query {
+			    product(id:${id}) {
+			   		id
+					systemId
+			    	name
+			    	retailPrice
+			    	SAPProductTitle
+			    	digitalAssets {
+			    	  URL
+			     	  name
+			    	}
+			  	}  
+			  }`
 
 		console.log("page-4 id", id);
 		console.log("page-4 FEED_SEARCH_QUERY", FEED_SEARCH_QUERY);
@@ -34,7 +33,6 @@ class Page4 extends PageGeneric {
 		console.log("Data::: ", links);
 
 		this.setState({ filterData: links });
-
 
 	}
 

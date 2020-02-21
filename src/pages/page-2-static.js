@@ -5,26 +5,26 @@ import SEO from "../components/seo"
 import productSection from './renderer'
 
 export default ({ children }) => {
+	
 	const data = useStaticQuery(
 		graphql`
-      query {
-        productApi {
-          product(id:"1002") {
-          systemId
-          id
-          SAPProductTitle
-          retailPrice
-          digitalAssets {
-            id
-            URL
-            status
-            name        
-    }
-    }
-  }
+		      query {
+		        productApi {
+		          product(id:"1002") {
+		     	    systemId
+		        	id
+		          	SAPProductTitle
+		          	retailPrice
+		         	digitalAssets {
+		            	id
+		         	   	URL
+		           	   	status
+		           	   	name        
+		    	    }
+		          }
+  			    }
         
-}`
-	)
+			  }`)
 
 	return (
 		<Layout>
