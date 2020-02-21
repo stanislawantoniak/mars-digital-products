@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import productRenderer from './renderer'
+import productRenderer from '../components/renderer'
 
 class PageGeneric extends Component {
 
