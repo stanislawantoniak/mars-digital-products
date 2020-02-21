@@ -23,8 +23,13 @@ class Page5 extends PageGeneric {
 					const jsonResponse = JSON.parse(responseBody);
 					console.log("Response from End point2", jsonResponse)
 					currentComponent.setState({ salsifyResponse: jsonResponse })
-					return this.productReducer(jsonResponse);
-
+					
+					const productNormalized = this.productReducer(jsonResponse); 
+					
+					this.setState({ filterData: productNormalized });
+					
+					return productNormalized;
+					
 				} catch (error) {
 
 					console.log("Response from End point3", error)
