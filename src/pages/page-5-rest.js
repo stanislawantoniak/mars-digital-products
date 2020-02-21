@@ -32,7 +32,7 @@ class Page5 extends PageGeneric {
 		});
 
 		const productNormalized = this.productReducer(fetchResult);
-		console.log("Normalized response from " + salsifyUrl, jsonResponse)
+		console.log("Normalized response from " + salsifyUrl, productNormalized)
 		this.setState({ filterData: productNormalized });
 
 	}
