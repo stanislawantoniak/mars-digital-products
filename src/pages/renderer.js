@@ -1,24 +1,11 @@
 import { Link } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 
 class Renderer {
 
-	produce(data, searchFun) {
+	produceProductSection(data) {
 		console.log("Data from Back end", data.product)
 		return (
-			<Layout>
-				<SEO title="Home" />
-				<h1>RENDERER Welcome to Mars Digital Product Experience - GraphQL API</h1>
-
-				<label>Enter Product ID </label>
-				<input type="text" name="searchText" onChange={this.handleChange} />
-				user entered text {this.state.id}
-				<h3>Product Details.</h3>
-				<button onClick={() => searchFun()}>
-					Search Product
-          		</button>
-
+			<div>
 				<table>
 					<thead>
 						<tr>
@@ -85,7 +72,7 @@ class Renderer {
 						<td><Link to="/page-5-rest/">Normal Rest Example</Link></td>
 					</tr>
 				</table>
-			</Layout>
+			</div>
 		)
 	}
 
