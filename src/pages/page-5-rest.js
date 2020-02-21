@@ -1,4 +1,4 @@
-import PageGeneric from './page-generic'
+import PageGeneric from '../components/page-generic'
 import { withApollo } from 'react-apollo'
 
 
