@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 class Renderer {
 
-	produceProductSection(data) {
+	productSection(data) {
 		console.log("Data from Back end", data.product)
 		return (
 			<div>
