@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import Layout from "../components/layout"
-import Navi from "../components/navi"
 import SEO from "../components/seo"
 import productRenderer from './renderer'
 
@@ -26,7 +25,6 @@ class PageGeneric extends Component {
 		return (
 			<Layout>
 				<SEO title="Home" />
-				<Navi/>
 				
 				<h2>This is dynamic GraphQL API demo. </h2>
 				<h3>Enter product code and hit Search Product. Use (use codes 1001..1055)</h3>

@@ -7,26 +7,28 @@ const Navi = () => (
 		<nav>
 			<ul class="menu">
 				<li>
-					<Link to="/" class="active">Home</Link>
+					<a>
+						<Link to="/" class="active">Home</Link>
+					</a>
 				</li>
 				<li>
-					<Link to="/page-2-static/">Static Graph QL Example</Link>
+					<a>
+						<Link to="/page-2-static/">Static Graph QL Example</Link>
+					</a>
 				</li>
 				<li>
-					<Link to="/page-1-gql/">Dynamic Graph QL Example</Link>
+					<a>
+						<Link to="/page-1-gql/">Dynamic Graph QL Example</Link>
+					</a>
 				</li>
 				<li>
-					<Link to="/page-3-rest/">Normal Rest Example</Link>
+					<a>
+						<Link to="/page-3-rest/">Normal Rest Example</Link>
+					</a>
 				</li>
 				<li class="slider"></li>
 			</ul>
 		</nav>
-
-		<div>
-			<Link to="/page-2-static/" className="myButton">Static Graph QL Example</Link>
-			<Link to="/page-1-gql/" className="myButton">Dynamic Graph QL Example</Link>
-			<Link to="/page-3-rest/" className="myButton">Normal Rest Example</Link>
-		</div>
 	</div>
 )
 export default Navi
