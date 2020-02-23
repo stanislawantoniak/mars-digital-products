@@ -768,7 +768,7 @@ nav ul li a:active {
   cursor: default;
 }
 
-.active nav ul li a {
+nav ul li a.active {
   color: #fff;
   cursor: default;
 } 
