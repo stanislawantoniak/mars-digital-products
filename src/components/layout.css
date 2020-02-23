@@ -666,6 +666,7 @@ pre tt:after {
   margin: 0;
 }
 .nav li {
+  align: 'left';
   font-size: 0.8em;
   line-height: 40px;
   border-bottom: 1px solid #888;
