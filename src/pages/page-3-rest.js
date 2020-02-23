@@ -75,12 +75,10 @@ class Page3 extends PageGeneric {
 
 	render() {
 		return (
-			<Layout activeItem='3'>
-				<SEO title="Rest" />
+			<Layout activeItem='3' title="Rest">
 
 				<h2>This is dynamic REST API demo.</h2>
 				<p>Enter product code and hit Display Product. Use (use codes 1001..1055)</p>
-				<br />
 				<hr />
 				<label>Enter Product Code</label>
 				<div>

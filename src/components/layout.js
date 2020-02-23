@@ -9,9 +9,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
+import SEO from "../components/seo"
 import "./layout.css"
 
-const Layout = ({ children, activeItem }) => {
+const Layout = ({ children, activeItem, title }) => {
 	const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -33,6 +34,7 @@ const Layout = ({ children, activeItem }) => {
 					paddingTop: 0,
 				}}
 			>
+			<SEO title={title}/>
 				<main>{children}</main>
 				<footer>
 					© {new Date().getFullYear()}, Built with
@@ -47,10 +49,12 @@ const Layout = ({ children, activeItem }) => {
 Layout.propTypes = {
 	children: PropTypes.node.isRequired,
 	activeItem: PropTypes.string,
+	title: PropTypes.string,
 }
 
 Layout.defaultProps = {
 	activeItem: `0`,
+	title: 'Home',
 }
 
 export default Layout

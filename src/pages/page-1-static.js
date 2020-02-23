@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+
 import productRenderer from './renderer'
 
 export default () => {
@@ -29,12 +29,10 @@ export default () => {
 			  }`)
 
 	return (
-		<Layout activeItem='1'>
-			<SEO title="Static Data" />
-			
+		<Layout activeItem='1' title="Static Data">
+		
 			<h2>Static Query Example</h2>
 			<p>This page displays static product data that was pulled during deployment of this site.</p>
-			<br/>
 			<hr/>
 			{ productRenderer(data.productApi)}
 			
