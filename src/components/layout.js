@@ -21,7 +21,7 @@ const Layout = ({ children, activeItem }) => {
       }
     }
   `)
-	console.log('page id:', activeItem);
+	console.log('Layout - page id:', activeItem);
 	return (
 		<>
 			<Header siteTitle={data.site.siteMetadata.title} activeItem={activeItem} />
