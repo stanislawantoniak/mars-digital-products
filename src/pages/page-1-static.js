@@ -32,8 +32,8 @@ export default () => {
 		<Layout activeItem='1'>
 			<SEO title="Static Data" />
 			
-			<h1>Welcome to Mars Digital Product Experience - Static Query Example</h1>
-			<p>Welcome to your Mars Digital Product Experience Application.</p>
+			<h2>Static Query Example</h2>
+			<h3>This page displays static product data that was pulled during deployment of this site.</h3>
 			<br/>
 			<hr/>
 			{ productRenderer(data.productApi)}

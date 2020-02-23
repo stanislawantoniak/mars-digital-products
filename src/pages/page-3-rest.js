@@ -78,7 +78,7 @@ class Page3 extends PageGeneric {
 			<Layout activeItem='3'>
 				<SEO title="Rest" />
 
-				<h2>This is dynamic GraphQL API demo. </h2>
+				<h2>This is dynamic GraphQL API demo.</h2>
 				<h3>Enter product code and hit Display Product. Use (use codes 1001..1055)</h3>
 
 				<label>Enter Product Code</label>
