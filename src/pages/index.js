@@ -15,10 +15,6 @@ const IndexPage = () => (
 
 		<Navi/>
 
-		<div>
-			<Image />
-		</div>
-
 	</Layout>
 		)
 		

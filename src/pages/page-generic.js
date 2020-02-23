@@ -26,14 +26,14 @@ class PageGeneric extends Component {
 		return (
 			<Layout>
 				<SEO title="Home" />
-				<h1>Welcome to Mars Digital Product Experience - GraphQL API</h1>
-
 				<Navi/>
-
+				
+				<h2>This is dynamic GraphQL API demo. </h2>
+				<h3>Enter product code and hit Search Product. Use (use codes 1001..1055)</h3>
+				
 				<label>Enter Product ID </label>
 				<div>
 					<input type="text" name="searchText" onChange={this.handleChange} />
-					(use codes 1001..1055)
 				<button onClick={() => this._executeSearch()}>Search Product</button>
 				</div>
 				<br />
