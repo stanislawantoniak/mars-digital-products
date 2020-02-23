@@ -7,24 +7,16 @@ const Navi = () => (
 		<nav>
 			<ul>
 				<li>
-					<a class="active">
-						<Link to="/">Home</Link>
-					</a>
+					<Link to="/" className="active">Home</Link>
 				</li>
 				<li>
-					<a>
-						<Link to="/page-1-static/">Static Graph QL Example</Link>
-					</a>
+					<Link to="/page-1-static/">Static Graph QL Example</Link>
 				</li>
 				<li>
-					<a>
-						<Link to="/page-2-gql/">Dynamic Graph QL Example</Link>
-					</a>
+					<Link to="/page-2-gql/">Dynamic Graph QL Example</Link>
 				</li>
 				<li>
-					<a>
-						<Link to="/page-3-rest/">Normal Rest Example</Link>
-					</a>
+					<Link to="/page-3-rest/">Normal Rest Example</Link>
 				</li>
 				<li class="slider"></li>
 			</ul>
