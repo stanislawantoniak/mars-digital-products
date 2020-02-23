@@ -1,7 +1,7 @@
 import React from "react"
-import PageGeneric from './page-generic'
+import PageGeneric from '../components/page-generic'
 import { withApollo } from 'react-apollo'
-
+import Layout from "../components/layout"
 
 class Page3 extends PageGeneric {
 
