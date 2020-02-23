@@ -769,8 +769,7 @@ nav ul li a:active {
 }
 
 .active nav ul li a {
-  background-color: #fff;
-  color:#1e62d0;
+  color: #fff;
   cursor: default;
 } 
 

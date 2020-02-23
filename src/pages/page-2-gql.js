@@ -52,7 +52,7 @@ class Page2 extends PageGeneric {
 				<SEO title="Dynamic GQL" />
 
 				<h2>This is dynamic GraphQL API demo. </h2>
-				<h3>Enter product code and hit Display Product. Use (use codes 1001..1055)</h3>
+				<p>Enter product code and hit Display Product. Use (use codes 1001..1055)</p>
 				<br />
 				<hr />
 				<label>Enter Product Code</label>

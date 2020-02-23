@@ -33,7 +33,7 @@ export default () => {
 			<SEO title="Static Data" />
 			
 			<h2>Static Query Example</h2>
-			<h3>This page displays static product data that was pulled during deployment of this site.</h3>
+			<p>This page displays static product data that was pulled during deployment of this site.</p>
 			<br/>
 			<hr/>
 			{ productRenderer(data.productApi)}
