@@ -5,7 +5,7 @@ import React from "react"
 const Navi = () => (
 	<div>
 		<nav>
-			<ul class="menu">
+			<ul class="nav">
 				<li>
 					<a>
 						<Link to="/" class="active">Home</Link>
