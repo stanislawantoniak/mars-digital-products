@@ -5,18 +5,21 @@ import React from "react"
 const Navi = () => (
 	<div>
 		<nav>
-			<a>
-				<Link to="/">Home</Link>
-			</a>
-			<a>
-				<Link to="/page-2-static/">Static Graph QL Example</Link>
-			</a>
-			<a>
-				<Link to="/page-1-gql/">Dynamic Graph QL Example</Link>
-			</a>
-			<a>
-				<Link to="/page-3-rest/">Normal Rest Example</Link>
-			</a>
+			<ul class="menu">
+				<li>
+					<Link to="/" class="active">Home</Link>
+				</li>
+				<li>
+					<Link to="/page-2-static/">Static Graph QL Example</Link>
+				</li>
+				<li>
+					<Link to="/page-1-gql/">Dynamic Graph QL Example</Link>
+				</li>
+				<li>
+					<Link to="/page-3-rest/">Normal Rest Example</Link>
+				</li>
+				<li class="slider"></li>
+			</ul>
 		</nav>
 
 		<div>
