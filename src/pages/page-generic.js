@@ -8,7 +8,7 @@ class PageGeneric extends Component {
 	state = {
 		id: '',
 		filterData: [],
-		pageId: '2',
+		pageId: '',
 	}
 
 	constructor(props) {
