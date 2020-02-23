@@ -645,6 +645,12 @@ pre tt:after {
 	top:1px;
 }
 
+
+.divider div{
+	height:2px;
+	background-color:#fff;
+}
+
 .nav div {
 	width: 960;
 }

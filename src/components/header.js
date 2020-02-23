@@ -28,6 +28,26 @@ const Header = ({ siteTitle }) => (
 			</h1>
 		</div>
 
+		<div class='divider'/>
+
+		<nav>
+			<ul>
+				<li>
+					<Link to="/" className="active">Home</Link>
+				</li>
+				<li>
+					<Link to="/page-1-static/">Static Graph QL Example</Link>
+				</li>
+				<li>
+					<Link to="/page-2-gql/">Dynamic Graph QL Example</Link>
+				</li>
+				<li>
+					<Link to="/page-3-rest/">Normal Rest Example</Link>
+				</li>
+				<li class="slider"></li>
+			</ul>
+		</nav>
+
 	</header>
 	
 )
