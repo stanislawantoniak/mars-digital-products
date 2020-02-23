@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-//import PropTypes from "prop-types"
+import PropTypes from "prop-types"
 import React from "react"
 
 const Navi = () => (
@@ -7,8 +7,8 @@ const Navi = () => (
 		<nav>
 			<ul>
 				<li>
-					<a>
-						<Link to="/" class="active">Home</Link>
+					<a class="active">
+						<Link to="/">Home</Link>
 					</a>
 				</li>
 				<li>
@@ -31,4 +31,13 @@ const Navi = () => (
 		</nav>
 	</div>
 )
+
+Header.propTypes = {
+	activeItem: PropTypes.string,
+}
+
+Header.defaultProps = {
+	activeItem: `home`,
+}
+
 export default Navi
