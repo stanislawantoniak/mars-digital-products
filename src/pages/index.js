@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, Button } from "gatsby"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
@@ -17,17 +17,17 @@ const IndexPage = () => (
     </div>
 
 	<div>
-    	<Button to="/page-2-static/">Static Graph QL Example</Button>
-    	<Button to="/page-1-gql/">Dynamic Graph QL Example</Button>
-    	<Button to="/page-3-rest/">Normal Rest Example</Button>
+    	<button to="/page-2-static/">Static Graph QL Example</button>
+    	<button to="/page-1-gql/">Dynamic Graph QL Example</button>
+    	<button to="/page-3-rest/">Normal Rest Example</button>
 	</div>
 	
     <table>
       <tr>
         <td>
-    <Link to="/page-2-static/">Static Graph QL Example</Link></td>
-    <td><Link to="/page-1-gql/">Dynamic Graph QL Example</Link></td>
-    <td><Link to="/page-3-rest/">Normal Rest Example</Link></td>
+    <Link to="/page-2-static/" className="button">Static Graph QL Example</Link></td>
+    <td><Link to="/page-1-gql/" className="button">Dynamic Graph QL Example</Link></td>
+    <td><Link to="/page-3-rest/" className="button">Normal Rest Example</Link></td>
     </tr>
     </table>
   </Layout>
