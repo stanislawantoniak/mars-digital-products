@@ -1,3 +1,4 @@
+import React from "react"
 import PageGeneric from './page-generic'
 import gql from 'graphql-tag';
 import { withApollo } from 'react-apollo'
@@ -5,7 +6,7 @@ import { withApollo } from 'react-apollo'
 class Page2 extends PageGeneric {
 
 	constructor(props) {
-		super(props,'2');
+		super(props);
 	}
 
 	_executeSearch = async () => {

@@ -1,3 +1,4 @@
+import React from "react"
 import PageGeneric from './page-generic'
 import { withApollo } from 'react-apollo'
 
@@ -5,7 +6,7 @@ import { withApollo } from 'react-apollo'
 class Page3 extends PageGeneric {
 
 	constructor(props) {
-		super(props, '3');
+		super(props);
 	}
 
 	_executeSearch = async () => {
