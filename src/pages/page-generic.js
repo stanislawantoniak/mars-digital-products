@@ -14,6 +14,7 @@ class PageGeneric extends Component {
 	constructor(props) {
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
+		console.log('page id:', this.state.pageId);
 	}
 
 	handleChange(event) {
