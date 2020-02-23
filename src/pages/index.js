@@ -16,20 +16,12 @@ const IndexPage = () => (
       <Image />
     </div>
 
-	<div>
-    	<button to="/page-2-static/">Static Graph QL Example</button>
-    	<button to="/page-1-gql/">Dynamic Graph QL Example</button>
-    	<button to="/page-3-rest/">Normal Rest Example</button>
+	<div>	
+    	<Link to="/page-2-static/" class="myButton">Static Graph QL Example</Link>
+    	<Link to="/page-1-gql/" class="myButton">Dynamic Graph QL Example</Link>
+    	<Link to="/page-3-rest/" class="myButton">Normal Rest Example</Link>
 	</div>
 	
-    <table>
-      <tr>
-        <td>
-    <Link to="/page-2-static/" className="button">Static Graph QL Example</Link></td>
-    <td><Link to="/page-1-gql/" className="button">Dynamic Graph QL Example</Link></td>
-    <td><Link to="/page-3-rest/" className="button">Normal Rest Example</Link></td>
-    </tr>
-    </table>
   </Layout>
 )
 
