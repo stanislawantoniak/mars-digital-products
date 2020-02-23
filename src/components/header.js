@@ -30,7 +30,7 @@ const Header = ({ siteTitle, activeItem }) => (
 
 		<div><a class='divider'> </a></div>
 
-		<nav class='nav' style={{
+		<nav class='navvvvi' style={{
 				margin: `0 auto`,
 				maxWidth: 960,
 			}}>
