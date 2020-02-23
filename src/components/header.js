@@ -28,7 +28,7 @@ const Header = ({ siteTitle, activeItem }) => (
 			</h1>
 		</div>
 
-		<div><a class='divider'> </a></div>
+		<div><a class='divider'>&nbsp;</a></div>
 
 		<nav class='navvvvi' style={{
 				margin: `0 auto`,
