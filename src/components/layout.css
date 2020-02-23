@@ -669,6 +669,7 @@ pre tt:after {
   text-decoration: none;
   color: #fff;
   display: block;
+  background-color:#1e62d0;
   transition: .3s background-color;
 }
  
@@ -678,7 +679,7 @@ pre tt:after {
  
 .nav a.active {
   background-color: #fff;
-  color: #444;
+  color:#1e62d0;
   cursor: default;
 }
  
