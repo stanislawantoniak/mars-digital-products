@@ -8,11 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Navi from "../components/navi"
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, activeItem }) => {
 	const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,7 +24,7 @@ const Layout = ({ children }) => {
 
 	return (
 		<>
-			<Header siteTitle={data.site.siteMetadata.title} />
+			<Header siteTitle={data.site.siteMetadata.title} activeItem={activeItem} />
 			<div
 				style={{
 					margin: `0 auto`,
@@ -47,6 +46,11 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
 	children: PropTypes.node.isRequired,
+	activeItem: PropTypes.string,
+}
+
+Layout.defaultProps = {
+	activeItem: `0`,
 }
 
 export default Layout
