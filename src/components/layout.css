@@ -630,13 +630,14 @@ pre tt:after {
 	border:1px solid #337fed;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
+	color:rgb(102, 51, 153);
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #1570cd;
+	margin: 20px;
 }
 .myButton:hover {
 	background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
