@@ -30,7 +30,7 @@ const Header = ({ siteTitle }) => (
 
 		<div class='divider'/>
 
-		<nav>
+		<nav class='nav'>
 			<ul>
 				<li>
 					<Link to="/" className="active">Home</Link>
