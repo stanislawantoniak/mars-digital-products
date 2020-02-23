@@ -13,12 +13,12 @@ const Navi = () => (
 				</li>
 				<li>
 					<a>
-						<Link to="/page-2-static/">Static Graph QL Example</Link>
+						<Link to="/page-1-static/">Static Graph QL Example</Link>
 					</a>
 				</li>
 				<li>
 					<a>
-						<Link to="/page-1-gql/">Dynamic Graph QL Example</Link>
+						<Link to="/page-2-gql/">Dynamic Graph QL Example</Link>
 					</a>
 				</li>
 				<li>
@@ -32,11 +32,11 @@ const Navi = () => (
 	</div>
 )
 
-Header.propTypes = {
+Navi.propTypes = {
 	activeItem: PropTypes.string,
 }
 
-Header.defaultProps = {
+Navi.defaultProps = {
 	activeItem: `home`,
 }
 

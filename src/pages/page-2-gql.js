@@ -2,7 +2,7 @@ import PageGeneric from './page-generic'
 import gql from 'graphql-tag';
 import { withApollo } from 'react-apollo'
 
-class Page4 extends PageGeneric {
+class Page2 extends PageGeneric {
 
 	_executeSearch = async () => {
 
@@ -40,4 +40,4 @@ class Page4 extends PageGeneric {
 
 }
 
-export default withApollo(Page4)
+export default withApollo(Page2)
