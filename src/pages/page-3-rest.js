@@ -2,6 +2,8 @@ import React from "react"
 import PageGeneric from '../components/page-generic'
 import { withApollo } from 'react-apollo'
 import Layout from "../components/layout"
+import SEO from "../components/seo"
+import productRenderer from './renderer'
 
 class Page3 extends PageGeneric {
 

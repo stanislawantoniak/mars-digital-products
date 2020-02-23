@@ -3,6 +3,8 @@ import PageGeneric from '../components/page-generic'
 import gql from 'graphql-tag';
 import { withApollo } from 'react-apollo'
 import Layout from "../components/layout"
+import SEO from "../components/seo"
+import productRenderer from './renderer'
 
 class Page2 extends PageGeneric {
 
