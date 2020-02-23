@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
+import Navi from "../components/navi"
 import SEO from "../components/seo"
 import productRenderer from './renderer'
 
