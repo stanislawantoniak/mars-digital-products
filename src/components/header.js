@@ -1,6 +1,5 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import Navi from "../components/navi"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
@@ -30,9 +29,8 @@ const Header = ({ siteTitle }) => (
 			</h1>
 		</div>
 
-		<Navi />
-
 	</header>
+	
 )
 
 Header.propTypes = {
