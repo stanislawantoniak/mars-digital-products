@@ -13,7 +13,7 @@ class Page2 extends PageGeneric {
 	}
 
 	_executeSearch = async () => {
-		
+
 		const { id } = this.state;
 		const FEED_SEARCH_QUERY = gql`
 			 query {
@@ -45,7 +45,7 @@ class Page2 extends PageGeneric {
 		this.setState({ filterData: links });
 
 	}
-	
+
 	render() {
 		return (
 			<Layout activeItem='2'>
@@ -53,7 +53,8 @@ class Page2 extends PageGeneric {
 
 				<h2>This is dynamic GraphQL API demo. </h2>
 				<h3>Enter product code and hit Display Product. Use (use codes 1001..1055)</h3>
-
+				<br />
+				<hr />
 				<label>Enter Product Code</label>
 				<div>
 					<input type="text" name="searchText" onChange={this.handleChange} />
