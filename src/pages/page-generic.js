@@ -11,9 +11,11 @@ class PageGeneric extends Component {
 		pageId: '',
 	}
 
-	constructor(props) {
+	constructor(props,pId) {
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
+		this.setState({ pageId: pId });
+		console.log('page-generic pageId:', this.state.pageId);
 	}
 
 	handleChange(event) {
