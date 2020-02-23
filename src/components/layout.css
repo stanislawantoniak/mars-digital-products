@@ -650,6 +650,8 @@ pre tt:after {
 
 
 .nav ul {
+  margin-left: 0;
+  margin-top: 20px;
   list-style: none;
   background-color: #444;
   text-align: center;
@@ -659,7 +661,6 @@ pre tt:after {
 .nav li {
   font-size: 0.2em;
   line-height: 40px;
-  height: 40px;
   border-bottom: 1px solid #888;
 }
  
@@ -682,9 +683,7 @@ pre tt:after {
  
 @media screen and (min-width: 600px) {
   .nav li {
-    width: 120px;
     border-bottom: none;
-    height: 50px;
     line-height: 50px;
     font-size: 0.4em;
   }
