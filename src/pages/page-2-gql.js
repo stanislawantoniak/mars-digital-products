@@ -7,7 +7,7 @@ class Page2 extends PageGeneric {
 	_executeSearch = async () => {
 
 		this.setState({ pageId: '2' });
-		console.log('page id:', this.state.pageId);
+		console.log('Page-2-gql - pageId:', this.state.pageId);
 		
 		const { id } = this.state;
 		const FEED_SEARCH_QUERY = gql`

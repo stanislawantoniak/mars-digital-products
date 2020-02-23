@@ -24,7 +24,7 @@ class PageGeneric extends Component {
 	render() {
 		console.log('page-generic - render() - page id:', this.state.pageId);
 		return (
-			<Layout siteItem={this.state.pageId}>
+			<Layout activeItem={this.state.pageId}>
 				<SEO title="Home" />
 				
 				<h2>This is dynamic GraphQL API demo. </h2>

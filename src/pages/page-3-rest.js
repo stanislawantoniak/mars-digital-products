@@ -7,8 +7,7 @@ class Page3 extends PageGeneric {
 	_executeSearch = async () => {
 
 		this.setState({ pageId: '2' });
-		console.log('page id:', this.state.pageId);
-
+		console.log('Page-3-rest - pageId:', this.state.pageId);
 
 		const { id } = this.state;
 
