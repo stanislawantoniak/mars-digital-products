@@ -728,14 +728,14 @@ header {
 
 nav {
   max-width: 960px;
-  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
   margin: 0 auto;
+  margin-bottom: 0;
   padding: 2px 0;
 }
 
 nav ul {
   text-align: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
 }
 
@@ -758,6 +758,14 @@ nav ul li a:hover {
   background: rgba(255, 255, 255, 0.1);
   color: rgba(0, 35, 122, 0.7);
 }
+
+
+nav ul li a:active {
+  background-color: #fff;
+  color:#1e62d0;
+  cursor: default;
+}
+
 
 
 
