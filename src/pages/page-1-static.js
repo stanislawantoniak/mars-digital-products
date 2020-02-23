@@ -30,7 +30,7 @@ export default ({ children }) => {
 			  }`)
 
 	return (
-		<Layout>
+		<Layout activeItem='1'>
 			<SEO title="Home" />
 			
 			<h1>Welcome to Mars Digital Product Experience - Static Query Example</h1>

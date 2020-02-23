@@ -7,7 +7,8 @@ class PageGeneric extends Component {
 
 	state = {
 		id: '',
-		filterData: []
+		filterData: [],
+		pageId: '2',
 	}
 
 	constructor(props) {
@@ -21,9 +22,9 @@ class PageGeneric extends Component {
 	}
 
 	render() {
-
+		
 		return (
-			<Layout>
+			<Layout siteItem={this.state.pageId}>
 				<SEO title="Home" />
 				
 				<h2>This is dynamic GraphQL API demo. </h2>
