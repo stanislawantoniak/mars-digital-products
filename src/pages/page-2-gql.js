@@ -54,10 +54,10 @@ class Page2 extends PageGeneric {
 				<h2>This is dynamic GraphQL API demo. </h2>
 				<h3>Enter product code and hit Search Product. Use (use codes 1001..1055)</h3>
 
-				<label>Enter Product ID </label>
+				<label>Enter Product Code</label>
 				<div>
 					<input type="text" name="searchText" onChange={this.handleChange} />
-					<button onClick={() => this._executeSearch()}>Search Product</button>
+					<button class='myButton' onClick={() => this._executeSearch()}>Search Product</button>
 				</div>
 				<br />
 				<hr />
