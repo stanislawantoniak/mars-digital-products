@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Layout from "../components/layout"
+import Navi from "../components/navi"
 import SEO from "../components/seo"
 import productRenderer from './renderer'
 
@@ -27,6 +28,8 @@ class PageGeneric extends Component {
 				<SEO title="Home" />
 				<h1>Welcome to Mars Digital Product Experience - GraphQL API</h1>
 
+				<Navi/>
+
 				<label>Enter Product ID </label>
 				<div>
 					<input type="text" name="searchText" onChange={this.handleChange} />
@@ -37,8 +40,6 @@ class PageGeneric extends Component {
 				<hr />
 
 				{productRenderer(this.state.filterData)}
-
-
 
 			</Layout>
 		)
