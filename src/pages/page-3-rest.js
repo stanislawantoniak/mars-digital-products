@@ -5,9 +5,9 @@ import { withApollo } from 'react-apollo'
 class Page3 extends PageGeneric {
 
 	constructor(props) {
-		super(props,'3');
+		super(props, '3');
 	}
-		
+
 	_executeSearch = async () => {
 
 		const { id } = this.state;
@@ -68,6 +68,28 @@ class Page3 extends PageGeneric {
 				bytes: asset['salsify:bytes'],
 				status: asset['salsify:status']
 			};
+	}
+
+	render() {
+		return (
+			<Layout activeItem='3'>
+				<SEO title="Home" />
+
+				<h2>This is dynamic GraphQL API demo. </h2>
+				<h3>Enter product code and hit Search Product. Use (use codes 1001..1055)</h3>
+
+				<label>Enter Product ID </label>
+				<div>
+					<input type="text" name="searchText" onChange={this.handleChange} />
+					<button onClick={() => this._executeSearch()}>Display Product</button>
+				</div>
+				<br />
+				<hr />
+
+				{productRenderer(this.state.filterData)}
+
+			</Layout>
+		)
 	}
 
 }
