@@ -30,7 +30,11 @@ const Header = ({ siteTitle }) => (
 
 		<div class='divider'/>
 
-		<nav class='nav'>
+		<nav class='nav' style={{
+				margin: `0 auto`,
+				maxWidth: 960,
+				padding: `1.45rem 1.0875rem`,
+			}}>
 			<ul>
 				<li>
 					<Link to="/" className="active">Home</Link>
