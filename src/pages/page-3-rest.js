@@ -4,10 +4,15 @@ import { withApollo } from 'react-apollo'
 
 class Page3 extends PageGeneric {
 
-	_executeSearch = async () => {
+	constructor(props) {
+		super(props);
 
 		this.setState({ pageId: '2' });
 		console.log('Page-3-rest - pageId:', this.state.pageId);
+		
+	}
+		
+	_executeSearch = async () => {
 
 		const { id } = this.state;
 

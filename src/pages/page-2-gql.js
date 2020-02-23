@@ -4,10 +4,15 @@ import { withApollo } from 'react-apollo'
 
 class Page2 extends PageGeneric {
 
-	_executeSearch = async () => {
-
+	constructor(props) {
+		super(props);
+		
 		this.setState({ pageId: '2' });
 		console.log('Page-2-gql - pageId:', this.state.pageId);
+	}
+
+	_executeSearch = async () => {
+
 		
 		const { id } = this.state;
 		const FEED_SEARCH_QUERY = gql`

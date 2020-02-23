@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
 
-	<Layout>
+	<Layout activeItem='0'>
 		<SEO title="Home" />
 		<h1>Welcome to Mars Digital World</h1>
 		<p>Welcome to your Mars Digital Product Experience Application.</p>
