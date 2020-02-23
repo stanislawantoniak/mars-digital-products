@@ -1,8 +1,15 @@
-import PageGeneric from './page-generic'
+import React from "react"
+import PageGeneric from '../components/page-generic'
 import { withApollo } from 'react-apollo'
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import productRenderer from './renderer'
 
+class Page3 extends PageGeneric {
 
-class Page5 extends PageGeneric {
+	constructor(props) {
+		super(props);
+	}
 
 	_executeSearch = async () => {
 
@@ -47,10 +54,7 @@ class Page5 extends PageGeneric {
 				brand: product.Brand,
 				description: product.Descriptions,
 				SAPProductTitle: product['SAP Product Title'],
-				cost: product.cost,
 				retailPrice: product['Retail Price'],
-				mainImage: this.assetReducer(this.getImageFromAssets(product['salsify:digital_assets'], product['Main Image (Front)'])),
-				backImage: this.assetReducer(this.getImageFromAssets(product['salsify:digital_assets'], product['Back Image'])),
 				digitalAssets: product['salsify:digital_assets'] == null ? [] : product['salsify:digital_assets'].map(asset => this.assetReducer(asset))
 			}
 		};
@@ -69,21 +73,26 @@ class Page5 extends PageGeneric {
 			};
 	}
 
-	getImageFromAssets(assetArray, id) {
-		const asset = (assetArray == null || id == null
-			? null
-			: assetArray.find(this.checkId, id));
+	render() {
+		return (
+			<Layout activeItem='3' title="Rest">
 
-		return asset;
+				<h2>This is dynamic REST API demo.</h2>
+				<p>Enter product code and hit Display Product. Use (use codes 1001..1055)</p>
+				<hr />
+				<label>Enter Product Code</label>
+				<div>
+					<input type="text" name="searchText" onChange={this.handleChange} />
+					<button class='myButton' onClick={() => this._executeSearch()}>Display Product</button>
+				</div>
+				<br />
+				<hr />
 
-	}
+				{productRenderer(this.state.filterData)}
 
-	checkId(item) {
-		console.log('this in checkId: ' + this);
-		return item == null
-			? false
-			: item['salsify:id'] == this
+			</Layout>
+		)
 	}
 
 }
-export default withApollo(Page5)
+export default withApollo(Page3)
