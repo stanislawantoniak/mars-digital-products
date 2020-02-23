@@ -647,6 +647,8 @@ pre tt:after {
 	top:1px;
 }
 
+
+
 .nav ul {
   list-style: none;
   background-color: #444;
@@ -655,8 +657,7 @@ pre tt:after {
   margin: 0;
 }
 .nav li {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.2em;
+  font-size: 0.2em;
   line-height: 40px;
   height: 40px;
   border-bottom: 1px solid #888;
@@ -685,7 +686,7 @@ pre tt:after {
     border-bottom: none;
     height: 50px;
     line-height: 50px;
-    font-size: 1.4em;
+    font-size: 0.4em;
   }
  
   /* Option 1 - Display Inline */
