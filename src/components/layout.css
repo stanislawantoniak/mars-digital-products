@@ -646,7 +646,7 @@ pre tt:after {
 }
 
 
-.divider div {
+.divider a {
 	height:2px;
 	background-color:#fff;
 }
@@ -673,11 +673,10 @@ pre tt:after {
  
 .nav a {
   text-decoration: none;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   color: #fff;
   display: block;
-  background-color:rgb(11, 11, 123);
   transition: .3s background-color;
 }
  

@@ -28,12 +28,11 @@ const Header = ({ siteTitle }) => (
 			</h1>
 		</div>
 
-		<div class='divider'/>
+		<div><a class='divider'/></div>
 
 		<nav class='nav' style={{
 				margin: `0 auto`,
 				maxWidth: 960,
-				padding: `1.45rem 1.0875rem`,
 			}}>
 			<ul>
 				<li>
