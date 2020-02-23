@@ -3,7 +3,10 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Navi = () => (
-	<div class="nav">
+	<div class="nav" style={{
+				margin: `0 auto`,
+				maxWidth: 960,
+			}}>
 		<nav>
 			<ul>
 				<li>
