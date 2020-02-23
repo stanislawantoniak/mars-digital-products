@@ -645,12 +645,6 @@ pre tt:after {
 	top:1px;
 }
 
-
-.divider a {
-	height:2px;
-	background-color:#fff;
-}
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 header {
