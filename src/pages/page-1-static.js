@@ -30,7 +30,7 @@ export default () => {
 
 	return (
 		<Layout activeItem='1'>
-			<SEO title="Home" />
+			<SEO title="Static Data" />
 			
 			<h1>Welcome to Mars Digital Product Experience - Static Query Example</h1>
 			<p>Welcome to your Mars Digital Product Experience Application.</p>

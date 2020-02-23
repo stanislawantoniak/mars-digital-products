@@ -49,7 +49,7 @@ class Page2 extends PageGeneric {
 	render() {
 		return (
 			<Layout activeItem='2'>
-				<SEO title="Home" />
+				<SEO title="Dynamic GQL" />
 
 				<h2>This is dynamic GraphQL API demo. </h2>
 				<h3>Enter product code and hit Search Product. Use (use codes 1001..1055)</h3>
