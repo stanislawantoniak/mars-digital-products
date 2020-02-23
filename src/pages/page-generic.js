@@ -14,7 +14,6 @@ class PageGeneric extends Component {
 	constructor(props) {
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
-		console.log('page id:', this.state.pageId);
 	}
 
 	handleChange(event) {
@@ -23,7 +22,7 @@ class PageGeneric extends Component {
 	}
 
 	render() {
-		
+		console.log('page-generic - render() - page id:', this.state.pageId);
 		return (
 			<Layout siteItem={this.state.pageId}>
 				<SEO title="Home" />
