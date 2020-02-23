@@ -28,11 +28,11 @@ class PageGeneric extends Component {
 				<h1>Welcome to Mars Digital Product Experience - GraphQL API</h1>
 
 				<label>Enter Product ID </label>
-				<input type="text" name="searchText" onChange={this.handleChange} />
-				(use codes 1001..1055)
-				<button onClick={() => this._executeSearch()}>
-					Search Product
-          		</button>
+				<div>
+					<input type="text" name="searchText" onChange={this.handleChange} />
+					(use codes 1001..1055)
+				<button onClick={() => this._executeSearch()}>Search Product</button>
+				</div>
 				<br />
 				<hr />
 

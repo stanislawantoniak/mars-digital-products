@@ -77,7 +77,7 @@ class Renderer {
 							</tr>
 						</table>
 					</div>
-					: 'Entervalid produxt code and hit enter to see product'}
+					: 'Enter valid produt code and hit enter to see product'}
 			</div>
 
 		)
