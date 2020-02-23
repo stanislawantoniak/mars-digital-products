@@ -3,9 +3,9 @@ import { Link } from "gatsby"
 import React from "react"
 
 const Navi = () => (
-	<div>
+	<div class="nav">
 		<nav>
-			<ul class="nav">
+			<ul>
 				<li>
 					<a>
 						<Link to="/" class="active">Home</Link>

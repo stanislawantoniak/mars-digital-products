@@ -11,9 +11,7 @@ const IndexPage = () => (
 		<h1>Welcome to Mars Digital World</h1>
 		<p>Welcome to your Mars Digital Product Experience Application.</p>
 		<p>This website is built using Gatsby, MuleSoft GraphQL enabled API.</p>
-		<p>Select one of the options below to see how product data is rendered.</p>
-
-		<Navi/>
+		<p>Select one of the options from menu bar to see how product data is rendered.</p>
 
 	</Layout>
 		)

@@ -645,7 +645,9 @@ pre tt:after {
 	top:1px;
 }
 
-
+.nav div {
+	width: 960;
+}
 
 .nav ul {
   margin-left: 0;
@@ -658,7 +660,7 @@ pre tt:after {
   margin: 0;
 }
 .nav li {
-  font-size: 0.2em;
+  font-size: 1.2em;
   line-height: 40px;
   border-bottom: 1px solid #888;
 }
@@ -687,7 +689,7 @@ pre tt:after {
   .nav li {
     border-bottom: none;
     line-height: 50px;
-    font-size: 0.4em;
+    font-size: 1.4em;
   }
  
   /* Option 1 - Display Inline */
