@@ -19,6 +19,7 @@ class Page2 extends PageGeneric {
 		console.log("page-2 FEED_SEARCH_QUERY", FEED_SEARCH_QUERY);
 
 		const { id } = this.state;
+		this.setState({ loading: true });
 		this.setState({ filterData: {} });
 
 		const FEED_SEARCH_QUERY = gql`
@@ -46,10 +47,10 @@ class Page2 extends PageGeneric {
 				variables: { id },
 			})
 			this.setState({ filterData: this.qglResult.data });
-			
+			this.setState({ loading: false });
 		}  catch (error) {
 				
-				this.gqlResult = { loading: false };
+				this.setState({ loading: false });
 				console.log("Error response from " + salsifyUrl, error)
 				return responseBody;
 			}
@@ -69,7 +70,7 @@ class Page2 extends PageGeneric {
 				</div>
 				<br />
 				<hr />
-				<div className={this.qglResult.loading ? 'loaderActive' : 'noClass'}>
+				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
 					{productRenderer(this.state.filterData)}
 				</div>
 			</Layout>
