@@ -11,8 +11,12 @@ class Page2 extends PageGeneric {
 		super(props);
 	}
 
+	gqlResult = {};
+
 	_executeSearch = async () => {
-		
+
+		this.setState({ filterData: {} });
+
 		const { id } = this.state;
 		const FEED_SEARCH_QUERY = gql`
 			 query {
@@ -33,17 +37,14 @@ class Page2 extends PageGeneric {
 
 		console.log("page-4 id", id);
 		console.log("page-4 FEED_SEARCH_QUERY", FEED_SEARCH_QUERY);
-		this.setState({ filterData: {} });
-		
-		const result = await this.props.client.query({
+
+
+		this.qglResult = await this.props.client.query({
 			query: FEED_SEARCH_QUERY,
 			variables: { id },
 		})
-		const links = result.data;
-		console.log('query result',result);
-		console.log("Data::: ", links);
-		
-		this.setState({ filterData: links });
+
+		this.setState({ filterData: this.qglResult.data });
 
 	}
 
@@ -60,7 +61,7 @@ class Page2 extends PageGeneric {
 				</div>
 				<br />
 				<hr />
-				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
+				<div className={this.qglResult.loading ? 'loaderActive' : 'noClass'}>
 					{productRenderer(this.state.filterData)}
 				</div>
 			</Layout>
