@@ -4,6 +4,7 @@ import gql from 'graphql-tag';
 import { withApollo } from 'react-apollo'
 import Layout from "../components/layout"
 import productRenderer from '../components/renderer'
+import Error from '../components/error'
 
 class Page2 extends PageGeneric {
 
@@ -18,6 +19,7 @@ class Page2 extends PageGeneric {
 		const { id } = this.state;
 		this.setState({ loading: true });
 		this.setState({ filterData: {} });
+		this.setState({ error: false });
 
 		const result = await this.getQ(id);
 
@@ -53,6 +55,7 @@ class Page2 extends PageGeneric {
 			})
 		} catch {
 			console.log('catch');
+			this.setState({ error: true });
 		} finally {
 			console.log('finally');
 		}
@@ -76,6 +79,7 @@ class Page2 extends PageGeneric {
 				<hr />
 				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
 					{productRenderer(this.state.filterData)}
+					{this.state.error? <Error id={this.state.id}/> : null}
 				</div>
 			</Layout>
 		)

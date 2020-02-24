@@ -1,6 +1,7 @@
 import React from "react"
 import PageGeneric from '../components/page-generic'
 import { withApollo } from 'react-apollo'
+import Error from '../components/error'
 import Layout from "../components/layout"
 import productRenderer from '../components/renderer'
 
@@ -16,6 +17,7 @@ class Page3 extends PageGeneric {
 
 		this.setState({ loading: true });
 		this.setState({ filterData: {} });
+		this.setState({ error: false });
 		
 		const salsifyUrl = 'https://dev.api.effem.com/salsify-product-proxy-poc/product/' + id;
 
@@ -40,6 +42,7 @@ class Page3 extends PageGeneric {
 			} catch (error) {
 				
 				this.setState({ loading: false });
+				this.setState({ error: true });
 				console.log("Error response from " + salsifyUrl, error)
 				return responseBody;
 
@@ -92,8 +95,8 @@ class Page3 extends PageGeneric {
 				<hr />
 				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
 					{productRenderer(this.state.filterData)}
+					{this.state.error? <Error id={this.state.id}/> : null}
 				</div>
-
 			</Layout>
 		)
 	}
