@@ -34,7 +34,7 @@ const Layout = ({ children, activeItem, title }) => {
 					paddingTop: 0,
 				}}
 			>
-			<SEO title={title}/>
+				<SEO title={title} />
 				<main>{children}</main>
 				<footer>
 					© {new Date().getFullYear()}, Built with
