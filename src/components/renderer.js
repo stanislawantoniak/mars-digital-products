@@ -31,42 +31,28 @@ class Renderer {
 						</table>
 						<div>
 							<h3>Digital Assets</h3>
-							<table>
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Video</th>
-									</tr>
-								</thead>
-								<tbody>
+								{data.product.digitalAssets.map((index) => (
+										<div class='imgContainer'>
+											<div>{index.name}</div>
+											<div>
+												{!index.URL.endsWith('jpg') ?
+													<iframe
+														src={index.URL.replace('http', 'https')}
+														title="Salsify Viedo"
+														allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+														frameBorder="5"
+														width="500"
+														height="500"
+														webkitallowfullscreen="false"
+														mozallowfullscreen="false"
 
-								</tbody>
-								{data.product ?
-									<tbody id={data.product.systemId}>
-										{data.product.digitalAssets.map((index) => (
-											<tr key={index}>
-												<td>{index.name}</td>
-												<td>
-													{!index.URL.endsWith('jpg') ?
-														<iframe
-															src={index.URL.replace('http', 'https')}
-															title="Salsify Viedo"
-															allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-															frameBorder="5"
-															width="500"
-															height="500"
-															webkitallowfullscreen="false"
-															mozallowfullscreen="false"
-
-														/>
-														: <img src={index.URL.replace('http', 'https')}></img>
-													}
-												</td>
-											</tr>
-										))}
-									</tbody>
-									: null}
-							</table>
+													/>
+													: <img src={index.URL.replace('http', 'https')}></img>
+												}
+											</div>
+										</div>
+									))
+								}
 						</div>
 
 					</div>
