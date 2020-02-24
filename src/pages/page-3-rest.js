@@ -81,7 +81,7 @@ class Page3 extends PageGeneric {
 		return (
 			<Layout activeItem='3' title="Rest">
 
-				<h2>This is dynamic REST API demo.</h2>
+				<h2>This is dynamic REST API example.</h2>
 				<p>Enter product code and hit Display Product. Use (use codes 1001..1055)</p>
 				<hr />
 				<div>
