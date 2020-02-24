@@ -29,21 +29,21 @@ class Page3 extends PageGeneric {
 				const jsonResponse = JSON.parse(responseBody);
 				console.log("Json response from " + salsifyUrl, jsonResponse)
 
-				return jsonResponse;
 
+				const productNormalized = this.productReducer(fetchResult);
+				console.log("Normalized response from " + salsifyUrl, productNormalized)
+				this.setState({ filterData: productNormalized });
+				this.setState({ loading: false });
+				return productNormalized;
+				
 			} catch (error) {
-
+				
+				this.setState({ loading: false });
 				console.log("Error response from " + salsifyUrl, error)
 				return responseBody;
 
 			}
 		});
-
-		this.setState({ loading: false });
-
-		const productNormalized = this.productReducer(fetchResult);
-		console.log("Normalized response from " + salsifyUrl, productNormalized)
-		this.setState({ filterData: productNormalized });
 
 	}
 
