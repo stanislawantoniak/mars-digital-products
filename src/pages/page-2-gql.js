@@ -14,7 +14,6 @@ class Page2 extends PageGeneric {
 	_executeSearch = async () => {
 
 		console.log("page-2 id", id);
-		console.log("page-2 FEED_SEARCH_QUERY", FEED_SEARCH_QUERY);
 
 		const { id } = this.state;
 		this.setState({ loading: true });
@@ -45,6 +44,8 @@ class Page2 extends PageGeneric {
 			    	}
 			  	}  
 			  }`
+		console.log("page-2 FEED_SEARCH_QUERY", FEED_SEARCH_QUERY);
+
 		try {
 			return this.props.client.query({
 				query: FEED_SEARCH_QUERY,
