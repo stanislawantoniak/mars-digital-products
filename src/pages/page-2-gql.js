@@ -20,6 +20,15 @@ class Page2 extends PageGeneric {
 		this.setState({ loading: true });
 		this.setState({ filterData: {} });
 
+		const result = await getQ(id);
+
+		this.setState({ filterData: result.data });
+		this.setState({ loading: false });
+
+	}
+
+	getQ = async (id) => {
+
 		const FEED_SEARCH_QUERY = gql`
 			 query {
 			    product(id:${id}) {
@@ -36,22 +45,16 @@ class Page2 extends PageGeneric {
 			    	}
 			  	}  
 			  }`
-
-
 		try {
-			
-			const result = await this.props.client.query({
+			return this.props.client.query({
 				query: FEED_SEARCH_QUERY,
 				variables: { id },
 			})
-			this.setState({ filterData: result.data });
-			this.setState({ loading: false });
-		}  catch (error) {
-				
-				this.setState({ loading: false });
-				console.log("Error response from " + salsifyUrl, error)
-				return responseBody;
-			}
+		} catch {
+			console.log('catch');
+		} finally {
+			console.log('finally');
+		}
 
 	}
 
