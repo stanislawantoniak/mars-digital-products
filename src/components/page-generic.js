@@ -4,7 +4,7 @@ class PageGeneric extends Component {
 
 	state = {
 		id: '',
-		filterData: [],
+		filterData: {},
 		loading: false,
 	}
 

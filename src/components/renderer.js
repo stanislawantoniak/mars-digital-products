@@ -59,7 +59,7 @@ class Renderer {
 						</div>
 
 					</div>
-					: 'Enter valid produt code and hit enter to see product'}
+					: 'Enter valid produt code and hit button to see product'}
 				<div class="loader">&nbsp;</div>
 			</div>
 
