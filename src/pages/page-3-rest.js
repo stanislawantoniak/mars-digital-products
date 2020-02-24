@@ -15,7 +15,8 @@ class Page3 extends PageGeneric {
 		const { id } = this.state;
 
 		this.setState({ loading: true });
-
+		this.setState({ filterData: [] });
+		
 		const salsifyUrl = 'https://dev.api.effem.com/salsify-product-proxy-poc/product/' + id;
 
 		console.log("Salsify URL", salsifyUrl);

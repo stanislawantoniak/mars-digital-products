@@ -33,7 +33,8 @@ class Page2 extends PageGeneric {
 
 		console.log("page-4 id", id);
 		console.log("page-4 FEED_SEARCH_QUERY", FEED_SEARCH_QUERY);
-
+		this.setState({ filterData: [] });
+		
 		const result = await this.props.client.query({
 			query: FEED_SEARCH_QUERY,
 			variables: { id },
