@@ -11,7 +11,7 @@ class Page2 extends PageGeneric {
 		super(props);
 	}
 
-	gqlResult = {};
+	gqlResult = {loading:false};
 
 	_executeSearch = async () => {
 
