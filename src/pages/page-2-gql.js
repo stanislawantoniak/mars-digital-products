@@ -13,7 +13,6 @@ class Page2 extends PageGeneric {
 
 	_executeSearch = async () => {
 		
-		this.setState({ loading: true });
 		const { id } = this.state;
 		const FEED_SEARCH_QUERY = gql`
 			 query {
@@ -42,7 +41,6 @@ class Page2 extends PageGeneric {
 		const links = result.data;
 		console.log("Data::: ", links);
 		
-		this.setState({ loading: false });
 		this.setState({ filterData: links });
 
 	}

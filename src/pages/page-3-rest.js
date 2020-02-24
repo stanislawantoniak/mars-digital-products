@@ -19,7 +19,7 @@ class Page3 extends PageGeneric {
 		const salsifyUrl = 'https://dev.api.effem.com/salsify-product-proxy-poc/product/' + id;
 
 		console.log("Salsify URL", salsifyUrl);
-		const fetchResult = await fetch(salsifyUrl, {
+		await fetch(salsifyUrl, {
 			method: 'get'
 		}).then((response) => {
 			console.log("Raw response from " + salsifyUrl, response)
@@ -30,7 +30,7 @@ class Page3 extends PageGeneric {
 				console.log("Json response from " + salsifyUrl, jsonResponse)
 
 
-				const productNormalized = this.productReducer(fetchResult);
+				const productNormalized = this.productReducer(jsonResponse);
 				console.log("Normalized response from " + salsifyUrl, productNormalized)
 				this.setState({ filterData: productNormalized });
 				this.setState({ loading: false });
