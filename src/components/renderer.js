@@ -60,7 +60,7 @@ class Renderer {
 
 					</div>
 					: 'Enter valid produt code and hit enter to see product'}
-				<div class="loader">Loading...</div>
+				<div class="loader">&nbsp;</div>
 			</div>
 
 		)

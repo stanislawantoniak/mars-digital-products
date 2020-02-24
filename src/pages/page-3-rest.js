@@ -2,7 +2,6 @@ import React from "react"
 import PageGeneric from '../components/page-generic'
 import { withApollo } from 'react-apollo'
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import productRenderer from '../components/renderer'
 
 class Page3 extends PageGeneric {
@@ -14,6 +13,8 @@ class Page3 extends PageGeneric {
 	_executeSearch = async () => {
 
 		const { id } = this.state;
+
+		this.setState({ loading: true });
 
 		const salsifyUrl = 'https://dev.api.effem.com/salsify-product-proxy-poc/product/' + id;
 
@@ -37,6 +38,8 @@ class Page3 extends PageGeneric {
 
 			}
 		});
+
+		this.setState({ loading: false });
 
 		const productNormalized = this.productReducer(fetchResult);
 		console.log("Normalized response from " + salsifyUrl, productNormalized)
@@ -86,8 +89,9 @@ class Page3 extends PageGeneric {
 				</div>
 				<br />
 				<hr />
-
-				{productRenderer(this.state.filterData)}
+				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
+					{productRenderer(this.state.filterData)}
+				</div>
 
 			</Layout>
 		)
