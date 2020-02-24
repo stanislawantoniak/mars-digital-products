@@ -86,6 +86,7 @@ class Page3 extends PageGeneric {
 
 				<h2>This is dynamic REST API example.</h2>
 				<p>Enter product code and hit Display Product. Use (use codes 1001..1055)</p>
+				<p>Data is pulled dynamically from a REST API endpoint built on Mulesoft platform. Mulesoft API is proxying Salsify API and adds headers to be displayed by browser.</p>
 				<hr />
 				<div>
 					<input type="text" name="searchText" onChange={this.handleChange} />
