@@ -40,6 +40,7 @@ class Page2 extends PageGeneric {
 			variables: { id },
 		})
 		const links = result.data;
+		console.log('query result',result);
 		console.log("Data::: ", links);
 		
 		this.setState({ filterData: links });
