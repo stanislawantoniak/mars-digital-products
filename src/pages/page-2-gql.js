@@ -42,7 +42,7 @@ class Page2 extends PageGeneric {
 
 		try {
 			
-			this.qglResult = await this.props.client.query({
+			this.qglResult = this.props.client.query({
 				query: FEED_SEARCH_QUERY,
 				variables: { id },
 			})
