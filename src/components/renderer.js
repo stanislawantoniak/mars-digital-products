@@ -31,33 +31,36 @@ class Renderer {
 						</table>
 						<div>
 							<h3>Digital Assets</h3>
+							<div>
 								{data.product.digitalAssets.map((index) => (
-										<div class='imgContainer'>
-											<div>{index.name}</div>
-											<div>
-												{!index.URL.endsWith('jpg') ?
-													<iframe
-														src={index.URL.replace('http', 'https')}
-														title="Salsify Viedo"
-														allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-														frameBorder="5"
-														width="500"
-														height="500"
-														webkitallowfullscreen="false"
-														mozallowfullscreen="false"
+									<div class='imgContainer'>
+										<div>{index.name}</div>
+										<div>
+											{!index.URL.endsWith('jpg') ?
+												<iframe
+													src={index.URL.replace('http', 'https')}
+													title="Salsify Viedo"
+													allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+													frameBorder="5"
+													width="500"
+													height="500"
+													webkitallowfullscreen="false"
+													mozallowfullscreen="false"
 
-													/>
-													: <img src={index.URL.replace('http', 'https')}></img>
-												}
-											</div>
-											<hr />
+												/>
+												: <img src={index.URL.replace('http', 'https')}></img>
+											}
 										</div>
-									))
+										<hr />
+									</div>
+								))
 								}
+							</div>
 						</div>
 
 					</div>
 					: 'Enter valid produt code and hit enter to see product'}
+				<div class="loader">Loading...</div>
 			</div>
 
 		)
