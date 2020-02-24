@@ -69,10 +69,10 @@ class Page2 extends PageGeneric {
 			<Layout activeItem='2' title="Dynamic GQL">
 
 				<h2>This is dynamic GraphQL API example. </h2>
-				<p>Enter product code and hit Display Product. Use codes 1001..1055.</p>
 				<p>Data is pulled from a GQL API built with Javascript technology - NodeJS framework/Apollo server. The API is pulling data from Salsify API.</p>
 				<hr />
 				<div>
+					<label>Enter product code and hit Display Product. Use codes 1001..1055, 8853301400149, 8853301400166</label>
 					<input type="text" name="searchText" onChange={this.handleChange} />
 					<button class='myButton' onClick={() => this._executeSearch()}>Display Product</button>
 				</div>
