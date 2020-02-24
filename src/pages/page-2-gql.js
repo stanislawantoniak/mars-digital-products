@@ -3,8 +3,7 @@ import PageGeneric from '../components/page-generic'
 import gql from 'graphql-tag';
 import { withApollo } from 'react-apollo'
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import productRenderer from './renderer'
+import productRenderer from '../components/renderer'
 
 class Page2 extends PageGeneric {
 
@@ -53,7 +52,6 @@ class Page2 extends PageGeneric {
 				<h2>This is dynamic GraphQL API demo. </h2>
 				<p>Enter product code and hit Display Product. Use (use codes 1001..1055)</p>
 				<hr />
-				<label>Enter Product Code</label>
 				<div>
 					<input type="text" name="searchText" onChange={this.handleChange} />
 					<button class='myButton' onClick={() => this._executeSearch()}>Display Product</button>

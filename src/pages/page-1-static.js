@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 
-import productRenderer from './renderer'
+import productRenderer from '../components/renderer'
 
 export default () => {
 	
