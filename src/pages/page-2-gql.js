@@ -57,7 +57,7 @@ class Page2 extends PageGeneric {
 			console.log('finally');
 		}
 		
-		return {data: null}; 
+		return {data: {product: false}}; 
 		
 	}
 
