@@ -50,6 +50,7 @@ class Renderer {
 													: <img src={index.URL.replace('http', 'https')}></img>
 												}
 											</div>
+											<hr />
 										</div>
 									))
 								}
