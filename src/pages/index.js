@@ -6,9 +6,9 @@ const IndexPage = () => (
 
 	<Layout activeItem='0'>
 		<SEO title="Home" />
-		<h1>Welcome to Mars Digital World</h1>
+		<h2>Welcome to Mars Digital World</h2>
 		<p>Welcome to your Mars Digital Product Experience Application.</p>
-		<p>This website is built using Gatsby, MuleSoft GraphQL enabled API.</p>
+		<p>This website is built using Gatsby framework based on NodeJs and is using MuleSoft GraphQL enabled API and Apollo GraphQL API based on NodeJs. Product data comes originally from Salsify (via Salsify API).</p>
 		<p>Select one of the options from menu bar to see how product data is rendered.</p>
 
 	</Layout>
