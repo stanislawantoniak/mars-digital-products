@@ -11,13 +11,16 @@ class Page2 extends PageGeneric {
 		super(props);
 	}
 
-	gqlResult = {loading:false};
+	gqlResult = { loading: false };
 
 	_executeSearch = async () => {
 
-		this.setState({ filterData: {} });
+		console.log("page-2 id", id);
+		console.log("page-2 FEED_SEARCH_QUERY", FEED_SEARCH_QUERY);
 
 		const { id } = this.state;
+		this.setState({ filterData: {} });
+
 		const FEED_SEARCH_QUERY = gql`
 			 query {
 			    product(id:${id}) {
@@ -35,16 +38,21 @@ class Page2 extends PageGeneric {
 			  	}  
 			  }`
 
-		console.log("page-4 id", id);
-		console.log("page-4 FEED_SEARCH_QUERY", FEED_SEARCH_QUERY);
 
-
-		this.qglResult = await this.props.client.query({
-			query: FEED_SEARCH_QUERY,
-			variables: { id },
-		})
-
-		this.setState({ filterData: this.qglResult.data });
+		try {
+			
+			this.qglResult = await this.props.client.query({
+				query: FEED_SEARCH_QUERY,
+				variables: { id },
+			})
+			this.setState({ filterData: this.qglResult.data });
+			
+		}  catch (error) {
+				
+				this.gqlResult = { loading: false };
+				console.log("Error response from " + salsifyUrl, error)
+				return responseBody;
+			}
 
 	}
 
