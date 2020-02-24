@@ -700,16 +700,16 @@ nav ul li a.active {
 } 
 
 
-.loader,
-.loader:before,
-.loader:after {
+.loaderActive .loader,
+.loaderActive .loader:before,
+.loaderActive .loader:after {
   background: #3d94f6;
   -webkit-animation: load1 1s infinite ease-in-out;
   animation: load1 1s infinite ease-in-out;
   width: 1em;
   height: 4em;
 }
-.loader {
+.loaderActive .loader {
   color: #3d94f6;
   text-indent: -9999em;
   margin: 88px auto;
@@ -721,18 +721,18 @@ nav ul li a.active {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
-.loader:before,
-.loader:after {
+.loaderActive .loader:before,
+.loaderActive .loader:after {
   position: absolute;
   top: 0;
   content: '';
 }
-.loader:before {
+.loaderActive .loader:before {
   left: -1.5em;
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
-.loader:after {
+.loaderActive .loader:after {
   left: 1.5em;
 }
 @-webkit-keyframes load1 {
