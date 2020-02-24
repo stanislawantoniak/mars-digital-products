@@ -8,11 +8,11 @@ const Error = ({id}) => (
 	</div>
 )
 
-Navi.propTypes = {
+Error.propTypes = {
 	id: PropTypes.string,
 }
 
-Navi.defaultProps = {
+Error.defaultProps = {
 	id: ``,
 }
 export default Error
