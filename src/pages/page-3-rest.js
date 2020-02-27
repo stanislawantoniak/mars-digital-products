@@ -88,7 +88,7 @@ class Page3 extends PageGeneric {
 				<p>Data is pulled dynamically from a REST API endpoint built on Mulesoft platform. Mulesoft API is proxying Salsify API and adds headers to be displayed by browser.</p>
 				<hr />
 				<div>
-					<label>Enter product code and hit Display Product. Use codes 1001..1055, 8853301400149, 8853301400166</label>
+					<p>Enter product code and hit Display Product. Use codes 1001..1055, 8853301400149, 8853301400166</p>
 					<input type="text" name="searchText" onChange={this.handleChange} />
 					<button class='myButton' onClick={() => this._executeSearch()}>Display Product</button>
 				</div>
