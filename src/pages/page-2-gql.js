@@ -17,18 +17,22 @@ class Page2 extends PageGeneric {
 		console.log("page-2 id", id);
 
 		const { id } = this.state;
-		this.setState({ loading: true });
-		this.setState({ filterData: {} });
-		this.setState({ error: false });
+		this.setState({
+			loading: true,
+			filterData: {},
+			error: false
+		});
 
 		const result = await this.getQ(id);
 
-		this.setState({ filterData: result.data });
-		this.setState({ loading: false });
-		this.setState( {originalData: this.state.filterData});
+		this.setState({
+			filterData: result.data,
+			loading: false,
+			originalData: this.state.filterData
+		});
 		const dataSize = (this.state.originalData ? JSON.stringify(this.state.originalData).length : 0);
 		console.log("Data size", dataSize);
-		
+
 	}
 
 	getQ = async (id) => {
@@ -41,7 +45,6 @@ class Page2 extends PageGeneric {
 			    	name
 			    	retailPrice
 					brand
-					description
 			    	SAPProductTitle
 			    	digitalAssets {
 			    	  URL
@@ -62,9 +65,9 @@ class Page2 extends PageGeneric {
 		} finally {
 			console.log('finally');
 		}
-		
-		return {data: {product: false}}; 
-		
+
+		return { data: { product: false } };
+
 	}
 
 	render() {
@@ -95,10 +98,10 @@ class Page2 extends PageGeneric {
 						}
 					</div>
 				</div>
-				
+
 				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
 					{productRenderer(this.state.filterData)}
-					{this.state.error? <Error id={this.state.id}/> : null}
+					{this.state.error ? <Error id={this.state.id} /> : null}
 				</div>
 			</Layout>
 		)
