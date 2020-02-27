@@ -20,6 +20,7 @@ class Page3 extends PageGeneric {
 		this.setState({ filterData: {} });
 		this.setState({ error: false });
 		this.setState({ size: 0 });
+		this.setState({ originalData: '' });
 		
 		const salsifyUrl = 'https://dev.api.effem.com/salsify-product-proxy-poc/product/' + id;
 
