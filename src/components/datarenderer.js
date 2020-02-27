@@ -4,7 +4,7 @@ class DataRenderer {
 
 	dataSection(original, toggleFun) {
 		console.log("Data from Back end - datarenderer", original);
-		const dataSize = ( original ? original.length : 0);
+		const dataSize = ( original ? JSON.stringify(original).length : 0);
 		console.log("Data size", dataSize);
 		return (
 			<div>
