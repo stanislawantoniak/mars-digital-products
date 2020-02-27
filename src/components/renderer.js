@@ -82,8 +82,8 @@ class Renderer {
 			<div>
 
 				{data.product ?
-					this.product
-					: 'Enter valid produt code and hit button to see product'}
+					this.product(data)
+					: 'Enter valid product code and hit button to see product'}
 				{ this.loader()}
 			</div>
 		)
