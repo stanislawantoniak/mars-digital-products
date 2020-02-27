@@ -4,8 +4,8 @@ class DataRenderer {
 
 	dataSection(original, toggleFun) {
 		console.log("Data from Back end - datarenderer", original);
-		console.log("Data size", size);
 		const dataSize = ( original ? original.length : 0);
+		console.log("Data size", dataSize);
 		return (
 			<div>
 				{size > 10 ?
