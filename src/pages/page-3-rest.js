@@ -20,7 +20,6 @@ class Page3 extends PageGeneric {
 			loading: true,
 			filterData: {},
 			error: false,
-			size: 0,
 			originalData: ''
 		});
 
@@ -40,7 +39,6 @@ class Page3 extends PageGeneric {
 				const productNormalized = this.productReducer(jsonResponse);
 				console.log("Normalized response from " + salsifyUrl, productNormalized)
 				this.setState({
-					size: (responseBody ? responseBody.lenght : 0),
 					originalData: jsonResponse,
 					filterData: productNormalized,
 					loading: false
@@ -109,6 +107,9 @@ class Page3 extends PageGeneric {
 
 				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
 					{productRenderer(this.state.filterData)}
+					<div className={this.state.dataActive ? 'contenton' : 'contentoff'}>
+						{dataRenderer(this.state.originalData, this.toggleDataActive)}
+					</div>
 					{this.state.error ? <Error id={this.state.id} /> : null}
 				</div>
 

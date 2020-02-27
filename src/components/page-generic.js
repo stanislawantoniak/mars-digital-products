@@ -6,7 +6,6 @@ class PageGeneric extends Component {
 		id: '',
 		filterData: {},
 		originalData: {},
-		size: 89,
 		dataActive: false,
 		loading: false,
 		error: false,
