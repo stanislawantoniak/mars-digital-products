@@ -103,7 +103,6 @@ class Page2 extends PageGeneric {
 
 				<div className={this.state.loading ? 'loaderActive' : 'loaderInactive'}>
 					{productRenderer(this.state.filterData?this.state.filterData:{})}
-
 					{this.state.error ? <Error id={this.state.id} /> : null}
 				</div>
 			</Layout>
