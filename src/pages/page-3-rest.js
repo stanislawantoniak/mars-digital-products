@@ -88,7 +88,7 @@ class Page3 extends PageGeneric {
 	}
 
 	render() {
-		console.log("Data from Back end - datarenderer", original);
+		console.log("Data from Back end - datarenderer", this.state.originalDat);
 		const dataSize = ( this.state.originalData ? JSON.stringify(this.state.originalData).length : 0);
 		console.log("Data size", dataSize);
 		
