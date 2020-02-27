@@ -1,5 +1,16 @@
+@font-face {
+    font-family: MarsCentra;
+    src: url("./MarsCentra-Book.otf") format("opentype");
+}
+
+@font-face {
+    font-family: MarsCentra;
+    font-weight: bold;
+    src: url("./MarsCentra-Book.otf") format("opentype");
+}
+
 html {
-  font-family: sans-serif;
+  font-family: MarsCentra;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
