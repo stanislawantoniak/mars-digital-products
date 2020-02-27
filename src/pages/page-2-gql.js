@@ -69,7 +69,7 @@ class Page2 extends PageGeneric {
 	}
 
 	render() {
-		this.setState({originalData: this.state.originalData});
+		this.setState({originalData: this.state.filterData});
 		console.log("Data from Back end - datarenderer", this.state.originalData);
 		const dataSize = (this.state.originalData ? JSON.stringify(this.state.originalData).length : 0);
 		console.log("Data size", dataSize);
@@ -101,7 +101,7 @@ class Page2 extends PageGeneric {
 				</div>
 
 				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
-					{productRenderer(this.state.filterData, this.state.originalData, this.state.size)}
+					{productRenderer(this.state.filterData)}
 					{this.state.error ? <Error id={this.state.id} /> : null}
 				</div>
 			</Layout>

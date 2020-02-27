@@ -113,7 +113,7 @@ class Page3 extends PageGeneric {
 							<div class="originaldata">
 								<button type="button" onClick={() => this.toggleDataActive()} class="collapsible">Size of product data transmitted {dataSize}. Click to view raw data.</button>
 								<div class="content">
-									<textarea cols="75" rows="25">{JSON.stringify(this.state.originalData, null, 2)}</textarea>
+									<textarea readonly cols="90" rows="25">{JSON.stringify(this.state.originalData, null, 3)}</textarea>
 								</div>
 							</div>
 							: <div />
