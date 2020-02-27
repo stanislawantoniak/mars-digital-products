@@ -4,6 +4,7 @@ import { withApollo } from 'react-apollo'
 import Error from '../components/error'
 import Layout from "../components/layout"
 import productRenderer from '../components/renderer'
+import dataRenderer from '../components/datarenderer'
 
 class Page3 extends PageGeneric {
 
@@ -18,6 +19,7 @@ class Page3 extends PageGeneric {
 		this.setState({ loading: true });
 		this.setState({ filterData: {} });
 		this.setState({ error: false });
+		this.setState({ size: 0 });
 		
 		const salsifyUrl = 'https://dev.api.effem.com/salsify-product-proxy-poc/product/' + id;
 
@@ -31,7 +33,10 @@ class Page3 extends PageGeneric {
 			try {
 				const jsonResponse = JSON.parse(responseBody);
 				console.log("Json response from " + salsifyUrl, jsonResponse)
-
+				
+				this.setState({ size: responseBody.lenght });
+				
+				this.setState({ originalData: jsonResponse });
 
 				const productNormalized = this.productReducer(jsonResponse);
 				console.log("Normalized response from " + salsifyUrl, productNormalized)
@@ -88,14 +93,17 @@ class Page3 extends PageGeneric {
 				<p>Data is pulled dynamically from a REST API endpoint built on Mulesoft platform. Mulesoft API is proxying Salsify API and adds headers to be displayed by browser.</p>
 				<hr />
 				<div>
-					<label>Enter product code and hit Display Product. Use codes 1001..1055, 8853301400149, 8853301400166</label>
+					<p>Enter product code and hit Display Product. Use codes 1001..1055, 8853301400149, 8853301400166</p>
 					<input type="text" name="searchText" onChange={this.handleChange} />
 					<button class='myButton' onClick={() => this._executeSearch()}>Display Product</button>
 				</div>
 				<br />
 				<hr />
+				
+
 				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
 					{productRenderer(this.state.filterData)}
+					{dataRenderer(this.state.originalData,this.state.size,this.state.dataActive)}
 					{this.state.error? <Error id={this.state.id}/> : null}
 				</div>
 			</Layout>

@@ -24,6 +24,7 @@ class Page2 extends PageGeneric {
 		const result = await this.getQ(id);
 
 		this.setState({ filterData: result.data });
+		this.setState({ originalData: result });
 		this.setState({ loading: false });
 
 	}
@@ -72,14 +73,14 @@ class Page2 extends PageGeneric {
 				<p>Data is pulled from a GQL API built with Javascript technology - NodeJS framework/Apollo server. The API is pulling data from Salsify API.</p>
 				<hr />
 				<div>
-					<label>Enter product code and hit Display Product. Use codes 1001..1055, 8853301400149, 8853301400166</label>
+					<p>Enter product code and hit Display Product. Use codes 1001..1055, 8853301400149, 8853301400166</p>
 					<input type="text" name="searchText" onChange={this.handleChange} />
 					<button class='myButton' onClick={() => this._executeSearch()}>Display Product</button>
 				</div>
 				<br />
 				<hr />
 				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
-					{productRenderer(this.state.filterData)}
+					{productRenderer(this.state.filterData,this.state.originalData,this.state.size)}
 					{this.state.error? <Error id={this.state.id}/> : null}
 				</div>
 			</Layout>
