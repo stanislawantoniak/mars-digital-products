@@ -9,7 +9,7 @@ class Renderer {
 			return (
 				<div>
 					<div>
-						<h3>Product Details.</h3>
+						<h3>Product Details</h3>
 						<table>
 							<thead>
 								<tr>
