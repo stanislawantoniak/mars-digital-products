@@ -789,6 +789,9 @@ h1 a {
   transition: max-height 0.2s ease-out;
   background-color: #ffffff;
 }
+.originaldata .content div {
+	border:1px solid #0000a0;
+}
 .contenton .originaldata .content {
   max-height: 500px;
 }
@@ -797,6 +800,6 @@ h1 a {
 }
 
 .contenton .content textarea {
-	margin: 18px;
+	margin: auto;
 	font-family: "Courier New", Courier, monospace;
 }
