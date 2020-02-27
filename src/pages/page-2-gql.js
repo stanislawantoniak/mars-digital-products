@@ -27,7 +27,7 @@ class Page2 extends PageGeneric {
 
 		this.setState({
 			filterData: result.data,
-			originalData: result, 
+			originalData: result,
 			loading: false
 		});
 
@@ -69,12 +69,16 @@ class Page2 extends PageGeneric {
 	}
 
 	render() {
-		this.setState({originalData: (this.state.filterData?this.state.filterData:{})});
+		this.setState({
+			filterData: this.state.filterData ? this.state.filterData : {},
+			originalData: this.state.filterData ? this.state.filterData : {}
+		});
+		
 		console.log("Data from Back end - datarenderer", this.state.originalData);
 		const dataSize = (this.state.originalData ? JSON.stringify(this.state.originalData).length : 0);
 		console.log("Data size", dataSize);
 		return (
-			<Layout activeItem='2' title="Dynamic GQL">
+			<Layout activeItem='2' title="Dynamic GQL" >
 
 				<h2>This is dynamic GraphQL API example. </h2>
 				<p>Data is pulled from a GQL API built with Javascript technology - NodeJS framework/Apollo server. The API is pulling data from Salsify API.</p>
@@ -87,22 +91,8 @@ class Page2 extends PageGeneric {
 				<br />
 				<hr />
 
-				<div className={this.state.dataActive ? 'contenton' : 'contentoff'}>
-					<div>
-						{dataSize > 2 ?
-							<div class="originaldata">
-								<button type="button" onClick={() => this.toggleDataActive()} class="collapsible">Size of product data transmitted {dataSize}. Click to view raw data.</button>
-								<div class="content">
-									<textarea readonly cols="90" rows="25">{JSON.stringify(this.state.originalData, null, 3)}</textarea>
-								</div>
-							</div>
-							: <div />
-						}
-					</div>
-				</div>
-
 				<div className={this.state.loading ? 'loaderActive' : 'loaderInactive'}>
-					{productRenderer(this.state.filterData?this.state.filterData:{})}
+					{productRenderer(this.state.filterData )}
 					{this.state.error ? <Error id={this.state.id} /> : null}
 				</div>
 			</Layout>
