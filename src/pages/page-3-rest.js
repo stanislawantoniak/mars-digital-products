@@ -96,7 +96,7 @@ class Page3 extends PageGeneric {
 				<br />
 				<hr />
 				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
-					{productRenderer(this.state.filterData,this.state.originalData,size)}
+					{productRenderer(this.state.filterData,this.state.originalData,this.state.size)}
 					{this.state.error? <Error id={this.state.id}/> : null}
 				</div>
 			</Layout>
