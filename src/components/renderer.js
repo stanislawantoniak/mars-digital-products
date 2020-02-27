@@ -64,14 +64,18 @@ class Renderer {
 			</div>
 		)
 	}
-	
-	
 
 	product(data) {
 		return (
 			<div>
-				{this.productDetails(data)}
-				{this.productAssets(data)}
+				{
+					data.product ?
+						<div>
+							{this.productDetails(data)}
+							{this.productAssets(data)}
+						</div>
+						: 'Enter valid product code and hit button to see product'
+				}
 			</div>
 		)
 	}
@@ -80,11 +84,8 @@ class Renderer {
 		console.log("Data from Back end - renderer", data.product);
 		return (
 			<div>
-
-				{data.product ?
-					this.product(data)
-					: 'Enter valid product code and hit button to see product'}
-				{ this.loader()}
+				{this.product(data)}
+				{this.loader()}
 			</div>
 		)
 	}
