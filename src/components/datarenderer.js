@@ -8,14 +8,14 @@ class DataRenderer {
 		console.log("Data size", dataSize);
 		return (
 			<div>
-				{size > 10 ?
+				{dataSize > 1 ?
 					<div class="originaldata">
 						<button type="button" onClick={ toggleFun } class="collapsible">Size of product data transmitted {dataSize}. Click to view data.</button>
 						<div class="content">
 							<p>{original}</p>
 						</div>
 					</div>
-					: ''
+					: <div/>
 				}
 			</div>
 		)
