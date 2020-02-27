@@ -12,7 +12,7 @@ class PageGeneric extends Component {
 	}
 
 	toggleDataActive(){
-		( this.state.dataActive? this.setState({ dataActive: false }) : this.setState({ dataActive: false }) );
+		( this.state.dataActive == true? this.setState({ dataActive: false }) : this.setState({ dataActive: false }) );
 		
 		console.log('Toggle active to',this.state.dataActive);
 		

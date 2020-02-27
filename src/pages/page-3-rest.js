@@ -107,20 +107,23 @@ class Page3 extends PageGeneric {
 				<br />
 				<hr />
 				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
-					{productRenderer(this.state.filterData)}
+
 					<div className={this.state.dataActive ? 'contenton' : 'contentoff'}>
 						<div>
-							{dataSize > 1 ?
+							{dataSize > 2 ?
 								<div class="originaldata">
-									<button type="button" onClick={() => this.toggleDataActive()} class="collapsible">Size of product data transmitted {dataSize}. Click to view data.</button>
+									<button type="button" onClick={() => this.toggleDataActive()} class="collapsible">Size of product data transmitted {dataSize}. Click to view raw data.</button>
 									<div class="content">
-										<p>{JSON.stringify(this.state.originalData)}</p>
+										<p>{JSON.stringify(this.state.originalData, null, 2)}</p>
 									</div>
 								</div>
 								: <div />
 							}
 						</div>
 					</div>
+
+					{productRenderer(this.state.filterData)}
+					
 					{this.state.error ? <Error id={this.state.id} /> : null}
 				</div>
 
