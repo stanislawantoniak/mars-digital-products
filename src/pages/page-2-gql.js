@@ -67,9 +67,6 @@ class Page2 extends PageGeneric {
 	render() {
 		
 		this.setState({originalData: (this.state.filterData?this.state.filterData:{})});
-		console.log("Data from Back end - datarenderer", this.state.originalData);
-		const dataSize = (this.state.originalData ? JSON.stringify(this.state.originalData).length : 0);
-		console.log("Data size", dataSize);
 		
 		return (
 			<Layout activeItem='2' title="Dynamic GQL">
