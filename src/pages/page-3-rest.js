@@ -34,7 +34,7 @@ class Page3 extends PageGeneric {
 				const jsonResponse = JSON.parse(responseBody);
 				console.log("Json response from " + salsifyUrl, jsonResponse)
 				
-				this.setState({ size: responseBody.lenght });
+				this.setState({ size: (responseBody ? responseBody.lenght : 0)});
 				
 				this.setState({ originalData: jsonResponse });
 
