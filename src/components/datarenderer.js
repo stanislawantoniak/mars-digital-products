@@ -3,10 +3,10 @@ import React from "react"
 class DataRenderer {
 
 	dataSection(original, size, active, toggle) {
-		console.log("Data from Back end - renderer", original);
+		console.log("Data from Back end - datarenderer", original);
 		return (
 			<div>
-				{original ?
+				{size > 10 ?
 					<div class="originaldata">
 						<button type="button" onClick={() => toggle } class="collapsible">Size of product data transmitted {size}. Click to view data.</button>
 						<div class="content" max-height={active ? '100 px' : '0'}>

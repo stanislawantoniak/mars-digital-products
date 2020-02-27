@@ -19,6 +19,7 @@ class Page3 extends PageGeneric {
 		this.setState({ loading: true });
 		this.setState({ filterData: {} });
 		this.setState({ error: false });
+		this.setState({ size: 0 });
 		
 		const salsifyUrl = 'https://dev.api.effem.com/salsify-product-proxy-poc/product/' + id;
 
@@ -32,6 +33,8 @@ class Page3 extends PageGeneric {
 			try {
 				const jsonResponse = JSON.parse(responseBody);
 				console.log("Json response from " + salsifyUrl, jsonResponse)
+				
+				this.setState({ size: responseBody.lenght });
 				
 				this.setState({ originalData: jsonResponse });
 
