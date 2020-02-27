@@ -6,6 +6,8 @@ const Header = ({ siteTitle, activeItem }) => (
 	<header>
 		<div
 			style={{
+				color: 'white',
+				fontDecoration:'none',
 				margin: `0 auto`,
 				maxWidth: 960,
 				padding: `1.45rem 1.0875rem`,

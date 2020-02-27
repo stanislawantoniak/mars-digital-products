@@ -655,7 +655,7 @@ pre tt:after {
 header {
   height:100%;
   color: #ffffff;
-  background-image: linear-gradient(to right top, #0000a0 0%, #9999ff 100%);
+  background-image: linear-gradient(to right top, #0000a0 0%, #ccccff 100%);
 }
 
 nav {
@@ -679,9 +679,11 @@ nav ul li {
 
 nav ul li a {
   padding: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
   font-family: inherit;
   text-transform:uppercase;
-  color: rgba(0, 35, 122, 0.5);
+  color:#000066;
   font-size: 18px;
   text-decoration: none;
   display: block;
