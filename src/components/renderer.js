@@ -2,11 +2,21 @@ import React from "react"
 
 class Renderer {
 
-	productSection(data) {
+	productSection(data, original, size) {
 		console.log("Data from Back end - renderer", data.product);
 		return (
 			<div>
 				<div>
+					{original ?
+						<div>
+							<button type="button" class="collapsible">Size of product data transmitted { size}. Click to view data.</button>
+							<div class="content">
+								<p>ks fdasd safdj askdj fkasdf jsakdj sj fksdf jsdfjdsdfj sj ksjaf;kldj ffksdf ksdfk jskfjdsdj jsakfdj askljdf alsj fdjasfd jsa
+								 jfhjkfjkashdfjshadj fhshadfjhasdfhshdjklh</p>
+							</div>
+						</div>
+						: ''
+					}
 					{
 						data.product ?
 							<div>
