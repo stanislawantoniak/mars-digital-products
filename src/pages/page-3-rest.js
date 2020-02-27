@@ -4,6 +4,7 @@ import { withApollo } from 'react-apollo'
 import Error from '../components/error'
 import Layout from "../components/layout"
 import productRenderer from '../components/renderer'
+import dataRenderer from '../components/datarenderer'
 
 class Page3 extends PageGeneric {
 
@@ -95,8 +96,11 @@ class Page3 extends PageGeneric {
 				</div>
 				<br />
 				<hr />
+				
+
 				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
-					{productRenderer(this.state.filterData,this.state.originalData,this.state.size)}
+					{productRenderer(this.state.filterData)}
+					{dataRenderer(this.state.originalData,this.state.size,this.state.dataActive)}
 					{this.state.error? <Error id={this.state.id}/> : null}
 				</div>
 			</Layout>
