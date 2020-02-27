@@ -89,9 +89,9 @@ class Page3 extends PageGeneric {
 
 	render() {
 		console.log("Data from Back end - datarenderer", this.state.originalData);
-		const dataSize = ( this.state.originalData ? JSON.stringify(this.state.originalData).length : 0);
+		const dataSize = (this.state.originalData ? JSON.stringify(this.state.originalData).length : 0);
 		console.log("Data size", dataSize);
-		
+
 		return (
 			<Layout activeItem='3' title="Rest">
 
@@ -106,24 +106,24 @@ class Page3 extends PageGeneric {
 				</div>
 				<br />
 				<hr />
-				<div className={this.state.loading ? 'loaderActive' : 'loaderInactive'}>
 
-					<div className={this.state.dataActive ? 'contenton' : 'contentoff'}>
-						<div>
-							{dataSize > 2 ?
-								<div class="originaldata">
-									<button type="button" onClick={() => this.toggleDataActive()} class="collapsible">Size of product data transmitted {dataSize}. Click to view raw data.</button>
-									<div class="content">
-										<textarea cols="75" rows="25">{JSON.stringify(this.state.originalData, null, 2)}</textarea>
-									</div>
+				<div className={this.state.dataActive ? 'contenton' : 'contentoff'}>
+					<div>
+						{dataSize > 2 ?
+							<div class="originaldata">
+								<button type="button" onClick={() => this.toggleDataActive()} class="collapsible">Size of product data transmitted {dataSize}. Click to view raw data.</button>
+								<div class="content">
+									<textarea cols="75" rows="25">{JSON.stringify(this.state.originalData, null, 2)}</textarea>
 								</div>
-								: <div />
-							}
-						</div>
+							</div>
+							: <div />
+						}
 					</div>
+				</div>
 
+				<div className={this.state.loading ? 'loaderActive' : 'loaderInactive'}>
 					{productRenderer(this.state.filterData)}
-					
+
 					{this.state.error ? <Error id={this.state.id} /> : null}
 				</div>
 
