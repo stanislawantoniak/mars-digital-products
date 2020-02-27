@@ -6,14 +6,15 @@ class PageGeneric extends Component {
 		id: '',
 		filterData: {},
 		originalData: {},
-		size: 89,
 		dataActive: false,
 		loading: false,
 		error: false,
 	}
 
 	toggleDataActive(){
-		( this.state.dataActive? this.setState({ dataActive: false }) : this.setState({ dataActive: false }) )
+		( this.state.dataActive == true? this.setState({ dataActive: false }) : this.setState({ dataActive: true }) );
+		console.log('Toggle active to',this.state.dataActive);
+		
 	}
 
 	constructor(props) {

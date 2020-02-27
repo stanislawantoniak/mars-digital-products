@@ -12,6 +12,6 @@ const IndexPage = () => (
 		<p>Select one of the options from menu bar to see how product data is rendered.</p>
 
 	</Layout>
-		)
-		
-		export default IndexPage
+)
+
+export default IndexPage

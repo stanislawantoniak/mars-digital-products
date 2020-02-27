@@ -17,15 +17,21 @@ class Page2 extends PageGeneric {
 		console.log("page-2 id", id);
 
 		const { id } = this.state;
-		this.setState({ loading: true });
-		this.setState({ filterData: {} });
-		this.setState({ error: false });
+		this.setState({
+			loading: true,
+			filterData: {},
+			error: false
+		});
 
 		const result = await this.getQ(id);
 
-		this.setState({ filterData: result.data });
-		this.setState({ originalData: result });
-		this.setState({ loading: false });
+		this.setState({
+			filterData: result.data,
+			loading: false,
+			originalData: result.data
+		});
+		const dataSize = (this.state.originalData ? JSON.stringify(this.state.originalData).length : 0);
+		console.log("Data size", dataSize);
 
 	}
 
@@ -39,7 +45,6 @@ class Page2 extends PageGeneric {
 			    	name
 			    	retailPrice
 					brand
-					description
 			    	SAPProductTitle
 			    	digitalAssets {
 			    	  URL
@@ -60,12 +65,13 @@ class Page2 extends PageGeneric {
 		} finally {
 			console.log('finally');
 		}
-		
-		return {data: {product: false}}; 
-		
+
+		return { data: { product: false } };
+
 	}
 
 	render() {
+
 		return (
 			<Layout activeItem='2' title="Dynamic GQL">
 
@@ -79,9 +85,23 @@ class Page2 extends PageGeneric {
 				</div>
 				<br />
 				<hr />
+				<div className={this.state.dataActive ? 'contenton' : 'contentoff'}>
+					<div>
+						{JSON.stringify(this.state.filterData).length > 2 ?
+							<div class="originaldata">
+								<button type="button" onClick={() => this.toggleDataActive()} class="collapsible">Size of product data transmitted {JSON.stringify(this.state.originalData).length}. Click to view raw data.</button>
+								<div class="content">
+									<textarea readonly cols="90" rows="25">{JSON.stringify(this.state.originalData, null, 3)}</textarea>
+								</div>
+							</div>
+							: <div />
+						}
+					</div>
+				</div>
+
 				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
-					{productRenderer(this.state.filterData,this.state.originalData,this.state.size)}
-					{this.state.error? <Error id={this.state.id}/> : null}
+					{productRenderer(this.state.filterData)}
+					{this.state.error ? <Error id={this.state.id} /> : null}
 				</div>
 			</Layout>
 		)
