@@ -106,7 +106,7 @@ class Page3 extends PageGeneric {
 				</div>
 				<br />
 				<hr />
- 
+
 				<div className={this.state.dataActive ? 'contenton' : 'contentoff'}>
 					<div>
 						{dataSize > 2 ?
