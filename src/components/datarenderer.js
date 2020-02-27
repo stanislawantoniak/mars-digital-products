@@ -3,7 +3,7 @@ import React from "react"
 class DataRenderer {
 
 	dataSection(original, size, active, toggle) {
-		console.log("Data from Back end - renderer", data.product);
+		console.log("Data from Back end - renderer", original);
 		return (
 			<div>
 				{original ?
