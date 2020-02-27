@@ -4,26 +4,15 @@ import React from "react"
 
 const Header = ({ siteTitle, activeItem }) => (
 	<header>
-		<div
-			style={{
-				color: 'white',
-				fontDecoration:'none',
-				margin: `0 auto`,
-				maxWidth: 960,
-				padding: `1.45rem 1.0875rem`,
-			}}
-		>
-			<h1 style={{ margin: 0 }}>
+		<div>
+			<h1>
 				<Link to="/">
 					{siteTitle}
 				</Link>
 			</h1>
 		</div>
 
-		<nav style={{
-				margin: `0 auto`,
-				maxWidth: 960,
-			}}>
+		<nav>
 			<ul>
 				<li>
 					<Link to="/" className={ activeItem == '0' ? 'active' : 'not-active'}>Home</Link>
