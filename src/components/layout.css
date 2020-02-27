@@ -13,11 +13,18 @@ html {
   font-family: MarsCentra;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  overflow-y: scroll;
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #000000;
+  font-family: MarsCentra;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
 }
 article,
 aside,
@@ -187,11 +194,7 @@ textarea {
   -webkit-appearance: button;
   font: inherit;
 }
-html {
-  font: 112.5%/1.45em inherit;
-  box-sizing: border-box;
-  overflow-y: scroll;
-}
+
 * {
   box-sizing: inherit;
 }
@@ -201,17 +204,7 @@ html {
 *:after {
   box-sizing: inherit;
 }
-body {
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: inherit;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
-}
+
 img {
   max-width: 100%;
   margin-left: 0;
@@ -228,7 +221,7 @@ h1 {
   margin-right: 0;
   margin-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  color: #ffffff;
   font-family: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -645,7 +638,6 @@ pre tt:after {
 
 header {
   height:100%;
-  color: #ffffff;
   background-image: linear-gradient(to right top, #0000a0 0%, #ccccff 100%);
 }
 
