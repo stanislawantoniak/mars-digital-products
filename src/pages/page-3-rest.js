@@ -31,7 +31,8 @@ class Page3 extends PageGeneric {
 			try {
 				const jsonResponse = JSON.parse(responseBody);
 				console.log("Json response from " + salsifyUrl, jsonResponse)
-
+				
+				this.setState({ originalData: jsonResponse });
 
 				const productNormalized = this.productReducer(jsonResponse);
 				console.log("Normalized response from " + salsifyUrl, productNormalized)

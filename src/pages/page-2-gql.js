@@ -24,6 +24,7 @@ class Page2 extends PageGeneric {
 		const result = await this.getQ(id);
 
 		this.setState({ filterData: result.data });
+		this.setState({ originalData: result });
 		this.setState({ loading: false });
 
 	}

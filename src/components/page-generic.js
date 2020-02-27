@@ -5,6 +5,7 @@ class PageGeneric extends Component {
 	state = {
 		id: '',
 		filterData: {},
+		originalData: {},
 		loading: false,
 		error: false,
 	}

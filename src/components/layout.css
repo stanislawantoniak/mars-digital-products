@@ -631,7 +631,7 @@ pre tt:after {
 
 header {
   height:100%;
-  background-color: #0000a0 0%;
+  background-image: linear-gradient(to right top, #0000a0 0%, #ccccff 100%);
 }
 
 nav {
