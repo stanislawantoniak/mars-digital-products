@@ -785,7 +785,6 @@ h1 a {
 
 /* Style the collapsible content. Note: hidden by default */
 .originaldata .content {
-  padding: 0 18px;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #ffffff;
@@ -797,7 +796,7 @@ h1 a {
   max-height: 0px;
 }
 
-.contenton .content p {
-	padding: 18px 18px;
+.contenton .content textarea {
+	margin: 18px;
 	font-family: "Courier New", Courier, monospace;
 }
