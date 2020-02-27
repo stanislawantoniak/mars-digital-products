@@ -28,7 +28,7 @@ class Page2 extends PageGeneric {
 		this.setState({
 			filterData: result.data,
 			loading: false,
-			originalData: this.state.filterData
+			originalData: result.data
 		});
 		const dataSize = (this.state.originalData ? JSON.stringify(this.state.originalData).length : 0);
 		console.log("Data size", dataSize);
@@ -87,7 +87,7 @@ class Page2 extends PageGeneric {
 				<hr />
 				<div className={this.state.dataActive ? 'contenton' : 'contentoff'}>
 					<div>
-						{JSON.stringify(this.state.originalData).length > 2 ?
+						{JSON.stringify(this.state.filterData).length > 2 ?
 							<div class="originaldata">
 								<button type="button" onClick={() => this.toggleDataActive()} class="collapsible">Size of product data transmitted {JSON.stringify(this.state.originalData).length}. Click to view raw data.</button>
 								<div class="content">
