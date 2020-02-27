@@ -16,12 +16,14 @@ class Page3 extends PageGeneric {
 
 		const { id } = this.state;
 
-		this.setState({ loading: true });
-		this.setState({ filterData: {} });
-		this.setState({ error: false });
-		this.setState({ size: 0 });
-		this.setState({ originalData: '' });
-		
+		this.setState({
+			loading: true,
+			filterData: {},
+			error: false,
+			size: 0,
+			originalData: ''
+		});
+
 		const salsifyUrl = 'https://dev.api.effem.com/salsify-product-proxy-poc/product/' + id;
 
 		console.log("Salsify URL", salsifyUrl);
@@ -34,21 +36,23 @@ class Page3 extends PageGeneric {
 			try {
 				const jsonResponse = JSON.parse(responseBody);
 				console.log("Json response from " + salsifyUrl, jsonResponse)
-				
-				this.setState({ size: (responseBody ? responseBody.lenght : 0)});
-				
-				this.setState({ originalData: jsonResponse });
 
 				const productNormalized = this.productReducer(jsonResponse);
 				console.log("Normalized response from " + salsifyUrl, productNormalized)
-				this.setState({ filterData: productNormalized });
-				this.setState({ loading: false });
+				this.setState({
+					size: (responseBody ? responseBody.lenght : 0),
+					originalData: jsonResponse,
+					filterData: productNormalized,
+					loading: false
+				});
 				return productNormalized;
-				
+
 			} catch (error) {
-				
-				this.setState({ loading: false });
-				this.setState({ error: true });
+
+				this.setState({
+					loading: false,
+					error: true
+				});
 				console.log("Error response from " + salsifyUrl, error)
 				return responseBody;
 
@@ -93,6 +97,7 @@ class Page3 extends PageGeneric {
 				<h2>This is dynamic REST API example.</h2>
 				<p>Data is pulled dynamically from a REST API endpoint built on Mulesoft platform. Mulesoft API is proxying Salsify API and adds headers to be displayed by browser.</p>
 				<hr />
+
 				<div>
 					<p>Enter product code and hit Display Product. Use codes 1001..1055, 8853301400149, 8853301400166</p>
 					<input type="text" name="searchText" onChange={this.handleChange} />
@@ -100,13 +105,13 @@ class Page3 extends PageGeneric {
 				</div>
 				<br />
 				<hr />
-				
+
 
 				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
 					{productRenderer(this.state.filterData)}
-					{dataRenderer(this.state.originalData,this.state.size,this.state.dataActive)}
-					{this.state.error? <Error id={this.state.id}/> : null}
+					{this.state.error ? <Error id={this.state.id} /> : null}
 				</div>
+
 			</Layout>
 		)
 	}
