@@ -69,7 +69,7 @@ class Page2 extends PageGeneric {
 	}
 
 	render() {
-		this.setState({originalData: this.state.filterData});
+		this.setState({originalData: (this.state.filterData?this.state.filterData:{})});
 		console.log("Data from Back end - datarenderer", this.state.originalData);
 		const dataSize = (this.state.originalData ? JSON.stringify(this.state.originalData).length : 0);
 		console.log("Data size", dataSize);
@@ -87,6 +87,19 @@ class Page2 extends PageGeneric {
 				<br />
 				<hr />
 
+				<div className={this.state.dataActive ? 'contenton' : 'contentoff'}>
+					<div>
+						{dataSize > 2 ?
+							<div class="originaldata">
+								<button type="button" onClick={() => this.toggleDataActive()} class="collapsible">Size of product data transmitted {dataSize}. Click to view raw data.</button>
+								<div class="content">
+									<textarea readonly cols="90" rows="25">{JSON.stringify(this.state.originalData, null, 3)}</textarea>
+								</div>
+							</div>
+							: <div />
+						}
+					</div>
+				</div>
 
 				<div className={this.state.loading ? 'loaderActive' : 'loaderInactive'}>
 					{productRenderer(this.state.filterData)}
