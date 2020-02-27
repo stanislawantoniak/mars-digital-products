@@ -222,9 +222,9 @@ h1 {
   margin-top: 0;
   margin-bottom: 1.45rem;
   color: #ffffff;
-  font-family: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
+  text-decoration: none;
   font-size: 2.25rem;
   line-height: 1.1;
   margin: 0 auto;
@@ -256,8 +256,6 @@ h3 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -272,8 +270,6 @@ h4 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -288,8 +284,6 @@ h5 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -304,7 +298,6 @@ h6 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
   font-family: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -665,7 +658,6 @@ nav ul li a {
   padding-left: 30px;
   padding-right: 30px;
   font-family: inherit;
-  text-transform:uppercase;
   color:#000066;
   font-size: 18px;
   text-decoration: none;
@@ -761,4 +753,9 @@ nav ul li a.active {
 
 footer { 
 	padding-top: 20px;
+}
+
+h1 a {
+	color: #ffffff;
+	text-decoration: none;
 }
