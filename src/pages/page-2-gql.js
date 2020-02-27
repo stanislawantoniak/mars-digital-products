@@ -39,7 +39,6 @@ class Page2 extends PageGeneric {
 			    	name
 			    	retailPrice
 					brand
-					description
 			    	SAPProductTitle
 			    	digitalAssets {
 			    	  URL

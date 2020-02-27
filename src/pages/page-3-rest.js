@@ -4,7 +4,6 @@ import { withApollo } from 'react-apollo'
 import Error from '../components/error'
 import Layout from "../components/layout"
 import productRenderer from '../components/renderer'
-import dataRenderer from '../components/datarenderer'
 
 class Page3 extends PageGeneric {
 
@@ -89,6 +88,10 @@ class Page3 extends PageGeneric {
 	}
 
 	render() {
+		console.log("Data from Back end - datarenderer", original);
+		const dataSize = ( original ? JSON.stringify(this.state.originalData).length : 0);
+		console.log("Data size", dataSize);
+		
 		return (
 			<Layout activeItem='3' title="Rest">
 
@@ -103,12 +106,20 @@ class Page3 extends PageGeneric {
 				</div>
 				<br />
 				<hr />
-
-
 				<div className={this.state.loading ? 'loaderActive' : 'noClass'}>
 					{productRenderer(this.state.filterData)}
 					<div className={this.state.dataActive ? 'contenton' : 'contentoff'}>
-						{dataRenderer(this.state.originalData, this.toggleDataActive)}
+						<div>
+							{dataSize > 1 ?
+								<div class="originaldata">
+									<button type="button" onClick={toggleFun} class="collapsible">Size of product data transmitted {dataSize}. Click to view data.</button>
+									<div class="content">
+										<p>{JSON.stringify(this.state.originalData)}</p>
+									</div>
+								</div>
+								: <div />
+							}
+						</div>
 					</div>
 					{this.state.error ? <Error id={this.state.id} /> : null}
 				</div>
