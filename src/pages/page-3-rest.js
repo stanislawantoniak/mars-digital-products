@@ -89,7 +89,7 @@ class Page3 extends PageGeneric {
 
 	render() {
 		console.log("Data from Back end - datarenderer", original);
-		const dataSize = ( original ? JSON.stringify(this.state.originalData).length : 0);
+		const dataSize = ( this.state.originalData ? JSON.stringify(this.state.originalData).length : 0);
 		console.log("Data size", dataSize);
 		
 		return (
@@ -112,7 +112,7 @@ class Page3 extends PageGeneric {
 						<div>
 							{dataSize > 1 ?
 								<div class="originaldata">
-									<button type="button" onClick={toggleFun} class="collapsible">Size of product data transmitted {dataSize}. Click to view data.</button>
+									<button type="button" onClick={this.toggleDataActive} class="collapsible">Size of product data transmitted {dataSize}. Click to view data.</button>
 									<div class="content">
 										<p>{JSON.stringify(this.state.originalData)}</p>
 									</div>
