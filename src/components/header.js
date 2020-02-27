@@ -3,11 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle, activeItem }) => (
-	<header
-		style={{
-			background: `rebeccapurple`
-		}}
-	>
+	<header>
 		<div
 			style={{
 				margin: `0 auto`,
@@ -16,13 +12,7 @@ const Header = ({ siteTitle, activeItem }) => (
 			}}
 		>
 			<h1 style={{ margin: 0 }}>
-				<Link
-					to="/"
-					style={{
-						color: `white`,
-						textDecoration: `none`,
-					}}
-				>
+				<Link to="/">
 					{siteTitle}
 				</Link>
 			</h1>
@@ -37,13 +27,13 @@ const Header = ({ siteTitle, activeItem }) => (
 					<Link to="/" className={ activeItem == '0' ? 'active' : 'not-active'}>Home</Link>
 				</li>
 				<li>
-					<Link to="/page-1-static/" className={ activeItem == '1' ? 'active' : 'not-active'}>Static Graph QL Example</Link>
+					<Link to="/page-1-static/" className={ activeItem == '1' ? 'active' : 'not-active'}>Static Graph QL</Link>
 				</li>
 				<li>
-					<Link to="/page-2-gql/" className={ activeItem == '2' ? 'active' : 'not-active'}>Dynamic Graph QL Example</Link>
+					<Link to="/page-2-gql/" className={ activeItem == '2' ? 'active' : 'not-active'}>Dynamic Graph QL</Link>
 				</li>
 				<li>
-					<Link to="/page-3-rest/" className={ activeItem == '3' ? 'active' : 'not-active'}>Normal Rest Example</Link>
+					<Link to="/page-3-rest/" className={ activeItem == '3' ? 'active' : 'not-active'}>Normal Rest</Link>
 				</li>
 				<li class="slider"></li>
 			</ul>
