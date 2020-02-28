@@ -781,6 +781,21 @@ h1 a {
   font-weight:bold;
 }
 
+.originaldata button.collapsible:after {
+	color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.contenton .originaldata button.collapsible:after {
+	content: "\2212";
+}
+
+.contentoff .originaldata button.collapsible:after {
+	content: "\0028";
+}
+
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .originaldata .active, .collapsible:hover {
 	background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
@@ -810,30 +825,4 @@ h1 a {
 	margin-left: 2px;
 }
 
-i {
-  border: solid white;
-  border-width: 0 4px 4px 0;
-  display: inline-block;
-  padding: 4px;
-}
 
-.contentoff .up {
-	height: 0px;
-}
-
-.contenton .down {
-	height: 0px;
-}
-
-.contenton .up {
-  max-height: 10px;
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-
-}
-
-.contentoff .down {
-  max-height: 10px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}

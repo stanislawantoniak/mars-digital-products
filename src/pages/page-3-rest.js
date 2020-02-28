@@ -113,11 +113,7 @@ class Page3 extends PageGeneric {
 							<div class="originaldata">
 								<div>
 									<button type="button" onClick={() => this.toggleDataActive()} class="collapsible">
-										<div>Size of product data transmitted {dataSize}. Click to view raw data.</div>
-										<div>
-											<i class="up"></i>
-											<i class="down"></i>
-										</div>
+										Size of product data transmitted {dataSize}. Click to view raw data.
 									</button>
 								</div>
 								<div class="content">
