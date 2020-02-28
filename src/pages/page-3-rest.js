@@ -95,7 +95,7 @@ class Page3 extends PageGeneric {
 		return ( 
 			<Layout activeItem='3' title="Rest">
 
-				<h2>This is dynamic REST API example.</h2>
+				<h2>This is dynamic REST API example.???</h2>
 				<p>Data is pulled dynamically from a REST API endpoint built on Mulesoft platform. Mulesoft API is proxying Salsify API and adds headers to be displayed by browser.</p>
 				<hr />
 
