@@ -92,7 +92,7 @@ class Page3 extends PageGeneric {
 		const dataSize = (this.state.originalData ? JSON.stringify(this.state.originalData).length : 0);
 		console.log("Data size", dataSize);
 
-		return (
+		return ( 
 			<Layout activeItem='3' title="Rest">
 
 				<h2>This is dynamic REST API example.</h2>
