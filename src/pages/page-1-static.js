@@ -11,16 +11,12 @@ export default () => {
 		      query {
 		        productApi {
 		          product(id:"1002") {
-		     	    systemId
 		        	id
 		          	SAPProductTitle
 		          	retailPrice
 					brand
-					description
 		         	digitalAssets {
-		            	id
 		         	   	URL
-		           	   	status
 		           	   	name        
 		    	    }
 		          }

@@ -364,8 +364,12 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0.8rem;
 }
+h {
+  margin-bottom: 15px;
+}
+
 figure {
   margin-left: 0;
   margin-right: 0;
@@ -601,31 +605,6 @@ pre tt:after {
   }
 }
 
-.myButton {
-	box-shadow:inset 0px 1px 0px 0px #97c4fe;
-	background:linear-gradient(to bottom, #3d94f6 5%, #0000a0 100%);
-	background-color:#0000a0;
-	border-radius:6px;
-	border:1px solid #4d4dff;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #1570cd;
-	margin: 5px
-}
-.myButton:hover {
-	background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
-	background-color:#1e62d0;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
@@ -681,7 +660,6 @@ nav ul li a.active {
   color: #fff;
   cursor: default;
 } 
-
 
 .loaderActive .loader,
 .loaderActive .loader:before,
@@ -765,28 +743,76 @@ h1 a {
 	margin-bottom: 18px;
 }
 
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	background:linear-gradient(to bottom, #3d94f6 5%, #0000a0 100%);
+	background-color:#0000a0;
+	border-radius:6px;
+	border:1px solid #4d4dff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #1570cd;
+	margin-left: 10px
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+	background-color:#1e62d0;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.originaldata {
+	margin-bottom: 0.8rem;
+}
+
 .originaldata .collapsible {
-  background-color: #3333a0;
-  color: #ffffff;
+  background:linear-gradient(to bottom, #3d94f6 5%, #0000a0 100%);
+  background-color:#0000a0;
+  color: white;
   cursor: pointer;
   padding: 15px;
   width: 100%;
   border: 2px;
+  font-family:Arial;
   text-align: left;
   outline: none;
-  font-size: 18px;
+  font-size: 16px;
   font-weight:bold;
+}
+
+button.collapsible:after {
+	color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.contenton button.collapsible:after {
+	content: "\2212";
+}
+
+.contentoff button.collapsible:after {
+	content: "\002B";
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .originaldata .active, .collapsible:hover {
-  background-color: #6666ff;
+	background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+	background-color:#1e62d0;
 }
 
 /* Style the collapsible content. Note: hidden by default */
 .originaldata .content {
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.4s ease-out;
   background-color: #ffffff;
 }
 .originaldata .content div {
@@ -797,9 +823,13 @@ h1 a {
 }
 .contentoff .originaldata .content {
   max-height: 0px;
+  max-width: 0px;	
 }
 
 .contenton .content textarea {
 	margin: auto;
 	font-family: "Courier New", Courier, monospace;
+	margin-left: 2px;
 }
+
+

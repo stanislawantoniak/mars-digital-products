@@ -92,7 +92,7 @@ class Page3 extends PageGeneric {
 		const dataSize = (this.state.originalData ? JSON.stringify(this.state.originalData).length : 0);
 		console.log("Data size", dataSize);
 
-		return (
+		return ( 
 			<Layout activeItem='3' title="Rest">
 
 				<h2>This is dynamic REST API example.</h2>
@@ -111,7 +111,11 @@ class Page3 extends PageGeneric {
 					<div>
 						{dataSize > 2 ?
 							<div class="originaldata">
-								<button type="button" onClick={() => this.toggleDataActive()} class="collapsible">Size of product data transmitted {dataSize}. Click to view raw data.</button>
+								<div>
+									<button type="button" onClick={() => this.toggleDataActive()} class="collapsible">
+										Size of product data transmitted {dataSize}. Click to view raw data.
+									</button>
+								</div>
 								<div class="content">
 									<textarea readonly cols="90" rows="25">{JSON.stringify(this.state.originalData, null, 3)}</textarea>
 								</div>
