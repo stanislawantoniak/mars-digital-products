@@ -119,7 +119,6 @@ class Page3 extends PageGeneric {
 											<i class="down"></i>
 										</div>
 									</button>
-
 								</div>
 								<div class="content">
 									<textarea readonly cols="90" rows="25">{JSON.stringify(this.state.originalData, null, 3)}</textarea>
