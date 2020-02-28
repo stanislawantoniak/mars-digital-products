@@ -41,7 +41,6 @@ class Page2 extends PageGeneric {
 			 query {
 			    product(id:${id}) {
 			   		id
-					systemId
 			    	name
 			    	retailPrice
 					brand

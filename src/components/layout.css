@@ -601,31 +601,6 @@ pre tt:after {
   }
 }
 
-.myButton {
-	box-shadow:inset 0px 1px 0px 0px #97c4fe;
-	background:linear-gradient(to bottom, #3d94f6 5%, #0000a0 100%);
-	background-color:#0000a0;
-	border-radius:6px;
-	border:1px solid #4d4dff;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #1570cd;
-	margin: 5px
-}
-.myButton:hover {
-	background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
-	background-color:#1e62d0;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
@@ -765,28 +740,57 @@ h1 a {
 	margin-bottom: 18px;
 }
 
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	background:linear-gradient(to bottom, #3d94f6 5%, #0000a0 100%);
+	background-color:#0000a0;
+	border-radius:6px;
+	border:1px solid #4d4dff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #1570cd;
+	margin-left: 10px
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+	background-color:#1e62d0;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
 .originaldata .collapsible {
-  background-color: #3333a0;
+  background:linear-gradient(to bottom, #3d94f6 5%, #0000a0 100%);
+  background-color:#0000a0;
   color: #ffffff;
   cursor: pointer;
   padding: 15px;
   width: 100%;
   border: 2px;
+  font-family:Arial;
   text-align: left;
   outline: none;
-  font-size: 18px;
+  font-size: 16px;
   font-weight:bold;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .originaldata .active, .collapsible:hover {
-  background-color: #6666ff;
+	background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+	background-color:#1e62d0;
 }
 
 /* Style the collapsible content. Note: hidden by default */
 .originaldata .content {
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.4s ease-out;
   background-color: #ffffff;
 }
 .originaldata .content div {
@@ -802,4 +806,5 @@ h1 a {
 .contenton .content textarea {
 	margin: auto;
 	font-family: "Courier New", Courier, monospace;
+	margin-left: 2px;
 }
