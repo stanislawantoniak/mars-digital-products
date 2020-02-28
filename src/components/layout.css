@@ -796,15 +796,36 @@ h1 a {
 .originaldata .content div {
 	border:1px solid #0000ff;
 }
+.up,
 .contenton .originaldata .content {
   max-height: 500px;
+  max-width: 960px;	
 }
+.down
 .contentoff .originaldata .content {
   max-height: 0px;
+  max-width: 0px;	
 }
 
 .contenton .content textarea {
 	margin: auto;
 	font-family: "Courier New", Courier, monospace;
 	margin-left: 2px;
+}
+
+i {
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 4px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
