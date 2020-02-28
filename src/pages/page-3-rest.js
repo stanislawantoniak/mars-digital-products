@@ -104,6 +104,7 @@ class Page3 extends PageGeneric {
 					<input type="text" name="searchText" onChange={this.handleChange} />
 					<button class='myButton' onClick={() => this._executeSearch()}>Display Product</button>
 				</div>
+				<br />
 				<hr />
 
 				<div className={this.state.dataActive ? 'contenton' : 'contentoff'}>

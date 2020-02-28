@@ -661,10 +661,6 @@ nav ul li a.active {
   cursor: default;
 } 
 
-div.loaderInactive {
-  margin-top: 1.2rem;
-}
-
 .loaderActive .loader,
 .loaderActive .loader:before,
 .loaderActive .loader:after {
