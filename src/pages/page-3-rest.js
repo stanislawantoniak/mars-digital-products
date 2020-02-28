@@ -112,9 +112,13 @@ class Page3 extends PageGeneric {
 						{dataSize > 2 ?
 							<div class="originaldata">
 								<div>
-								<button type="button" onClick={() => this.toggleDataActive()} class="collapsible">Size of product data transmitted {dataSize}. Click to view raw data.</button>
-								<i class="up"></i>
-								<i class="down"></i>
+									<button type="button" onClick={() => this.toggleDataActive()} class="collapsible">
+										<div>Size of product data transmitted {dataSize}. Click to view raw data.</div>
+										<div>
+											<i class="up"></i>
+											<i class="down"></i>
+										</div>
+									</button>
 								</div>
 								<div class="content">
 									<textarea readonly cols="90" rows="25">{JSON.stringify(this.state.originalData, null, 3)}</textarea>
